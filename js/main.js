@@ -39,30 +39,6 @@
 		}
 	};
 
-	var toggleBtnColor = function() {
-
-	
-		if ( $('#fh5co-hero').length > 0 ) {	
-			$('#fh5co-hero').waypoint( function( direction ) {
-				if( direction === 'down' ) {
-					$('.fh5co-nav-toggle').addClass('dark');
-				}
-			} , { offset: - $('#fh5co-hero').height() } );
-
-			$('#fh5co-hero').waypoint( function( direction ) {
-				if( direction === 'up' ) {
-					$('.fh5co-nav-toggle').removeClass('dark');
-				}
-			} , { 
-				offset:  function() { return -$(this.element).height() + 0; }
-			} );
-		}
-
-
-
-	};
-
-
 	// Scroll Next
 	var ScrollNext = function() {
 		$('body').on('click', '.scroll-btn', function(e){
@@ -74,71 +50,6 @@
 			return false;
 		});
 	};
-
-	// Click outside of offcanvass
-	var mobileMenuOutsideClick = function() {
-
-		$(document).click(function (e) {
-	    var container = $("#fh5co-offcanvas, .js-fh5co-nav-toggle");
-	    if (!container.is(e.target) && container.has(e.target).length === 0) {
-
-	    	if ( $('body').hasClass('offcanvas-visible') ) {
-
-    			$('body').removeClass('offcanvas-visible');
-    			$('.js-fh5co-nav-toggle').removeClass('active');
-				
-	    	}
-	    
-	    	
-	    }
-		});
-
-	};
-
-
-	// Offcanvas
-	var offcanvasMenu = function() {
-		$('body').prepend('<div id="fh5co-offcanvas" />');
-		$('#fh5co-offcanvas').prepend('<ul id="fh5co-side-links">');
-		$('body').prepend('<a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>');
-
-		$('.left-menu li, .right-menu li').each(function(){
-
-			var $this = $(this);
-
-			$('#fh5co-offcanvas ul').append($this.clone());
-
-		});
-	};
-
-	// Burger Menu
-	var burgerMenu = function() {
-
-		$('body').on('click', '.js-fh5co-nav-toggle', function(event){
-			var $this = $(this);
-
-			$('body').toggleClass('fh5co-overflow offcanvas-visible');
-			$this.toggleClass('active');
-			event.preventDefault();
-
-		});
-
-		$(window).resize(function() {
-			if ( $('body').hasClass('offcanvas-visible') ) {
-		   	$('body').removeClass('offcanvas-visible');
-		   	$('.js-fh5co-nav-toggle').removeClass('active');
-		   }
-		});
-
-		$(window).scroll(function(){
-			if ( $('body').hasClass('offcanvas-visible') ) {
-		   	$('body').removeClass('offcanvas-visible');
-		   	$('.js-fh5co-nav-toggle').removeClass('active');
-		   }
-		});
-
-	};
-
 
 	var testimonialFlexslider = function() {
 		var $flexslider = $('.flexslider');
@@ -204,11 +115,7 @@
 		gotToNextSection();
 		loaderPage();
 		fullHeight();
-		toggleBtnColor();
 		ScrollNext();
-		mobileMenuOutsideClick();
-		offcanvasMenu();
-		burgerMenu();
 		testimonialFlexslider();
 		goToTop();
 
@@ -218,4 +125,115 @@
 	});
 
 
+}());
+
+(function () {
+	'use strict';
+
+	var header = document.getElementById('fh5co-header');
+	if (!header || document.getElementById('menu-toggle')) {
+		return;
+	}
+
+	header.insertAdjacentHTML('afterbegin',
+		'<button id="menu-toggle" type="button" aria-controls="menu-compact" aria-expanded="false">' +
+			'<span class="menu-icon" aria-hidden="true">&#9776;</span> Menu' +
+		'</button>' +
+		'<div id="menu-overlay" aria-hidden="true"></div>' +
+		'<aside id="menu-compact" aria-hidden="true" aria-label="Menu principal">' +
+			'<div class="menu-compact-header">' +
+				'<h1></h1>' +
+				'<button class="menu-close" type="button" aria-label="Fermer le menu">&times;</button>' +
+			'</div>' +
+			'<div class="menu-tabs" role="tablist" aria-label="Rubriques principales">' +
+				'<button class="menu-tab is-active" type="button" role="tab" aria-selected="true" data-menu-panel="fonctions-panel">Fonctions langagi&egrave;res</button>' +
+				'<button class="menu-tab" type="button" role="tab" aria-selected="false" data-menu-panel="aspects-panel">Aspects linguistiques</button>' +
+			'</div>' +
+			'<div id="fonctions-panel" class="menu-panel is-active" role="tabpanel">' +
+				'<div class="menu-group">' +
+					'<button class="menu-group-toggle" type="button" aria-expanded="true">Rituels sociaux</button>' +
+					'<div class="menu-group-links">' +
+						'<a href="module1.html">Saluer</a>' +
+						'<a href="module2.html">Remercier</a>' +
+						'<a href="module3.html">S’excuser</a>' +
+					'</div>' +
+				'</div>' +
+				'<div class="menu-group">' +
+					'<button class="menu-group-toggle" type="button" aria-expanded="false">Indiquer son accord</button>' +
+					'<div class="menu-group-links"><span>&Agrave; venir</span></div>' +
+				'</div>' +
+				'<div class="menu-group">' +
+					'<button class="menu-group-toggle" type="button" aria-expanded="false">Exprimer ses &eacute;motions</button>' +
+					'<div class="menu-group-links"><span>&Agrave; venir</span></div>' +
+				'</div>' +
+			'</div>' +
+			'<div id="aspects-panel" class="menu-panel menu-aspects" role="tabpanel">' +
+				'<a href="aspects1.html">Registres et conditions d&rsquo;emplois</a>' +
+				'<a href="aspects2.html">Combinatoire des PPI</a>' +
+				'<a href="aspects4.html">Constructions syntaxiques</a>' +
+			'</div>' +
+		'</aside>'
+	);
+
+	var rightMenu = header.querySelector('.right-menu.align-right');
+	if (rightMenu) {
+		header.appendChild(rightMenu);
+	}
+
+	var legacyNav = header.querySelector('nav');
+	if (legacyNav) {
+		legacyNav.style.display = 'none';
+	}
+
+	var menuToggle = document.getElementById('menu-toggle');
+	var menuCompact = document.getElementById('menu-compact');
+	var menuOverlay = document.getElementById('menu-overlay');
+	var menuClose = menuCompact.querySelector('.menu-close');
+
+	function setMenuOpen(isOpen) {
+		menuCompact.classList.toggle('is-open', isOpen);
+		menuOverlay.classList.toggle('is-visible', isOpen);
+		menuToggle.setAttribute('aria-expanded', String(isOpen));
+		menuCompact.setAttribute('aria-hidden', String(!isOpen));
+		menuOverlay.setAttribute('aria-hidden', String(!isOpen));
+		document.body.style.overflow = isOpen ? 'hidden' : '';
+	}
+
+	menuToggle.addEventListener('click', function () {
+		setMenuOpen(!menuCompact.classList.contains('is-open'));
+	});
+	menuClose.addEventListener('click', function () {
+		setMenuOpen(false);
+	});
+	menuOverlay.addEventListener('click', function () {
+		setMenuOpen(false);
+	});
+	document.addEventListener('keydown', function (event) {
+		if (event.key === 'Escape') {
+			setMenuOpen(false);
+		}
+	});
+
+	menuCompact.querySelectorAll('.menu-tab').forEach(function (tab) {
+		tab.addEventListener('click', function () {
+			menuCompact.querySelectorAll('.menu-tab').forEach(function (otherTab) {
+				otherTab.classList.remove('is-active');
+				otherTab.setAttribute('aria-selected', 'false');
+			});
+			menuCompact.querySelectorAll('.menu-panel').forEach(function (panel) {
+				panel.classList.remove('is-active');
+			});
+			tab.classList.add('is-active');
+			tab.setAttribute('aria-selected', 'true');
+			document.getElementById(tab.dataset.menuPanel).classList.add('is-active');
+		});
+	});
+
+	menuCompact.querySelectorAll('.menu-group-toggle').forEach(function (toggle) {
+		toggle.addEventListener('click', function () {
+			var group = toggle.parentElement;
+			var isOpen = group.classList.toggle('is-open');
+			toggle.setAttribute('aria-expanded', String(isOpen));
+		});
+	});
 }());
