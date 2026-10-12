@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Transcriptions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Transcriptions avec audios et vidéos pour les phrases préfabriquées d'interaction." />
+  <meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
+  <meta name="author" content="FREEHTML5.CO" />
+
+  <link rel="shortcut icon" href="favicon.ico">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,600,400italic,700' rel='stylesheet' type='text/css'>
+
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="css/animate.css">
+  <!-- Flexslider -->
+  <link rel="stylesheet" href="css/flexslider.css">
+  <!-- Icomoon Icon Fonts-->
+  <link rel="stylesheet" href="css/icomoon.css">
+  <!-- Magnific Popup -->
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <!-- Bootstrap  -->
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/red.css">
+  
+  <style>
+    body {
+      background: #fff !important;
+      background-image: none !important;
+    }
+
+    #fh5co-hero .fh5co-overlay {
+      background: transparent !important;
+    }
+
+    /* Style général des boutons header */
+    .btn-header-tool {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: 20px;
+      transition: all 0.2s ease-in-out;
+      text-decoration: none;
+    }
+
+    .header-tool-icon {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+    }
+
+    .btn-header-tool:hover {
+      opacity: 0.8;
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+
+    .btn-header-tool:hover .icon-arrow {
+      transform: translate(2px, -2px);
+      transition: transform 0.2s ease;
+    }
+
+    /* Style moderne des boutons de ressources du tableau (Vidéo & PDF) */
+    #myTable a[href^="video/"],
+    #myTable a[href^="pdf/"] {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 6px 12px;
+      margin: 2px 3px;
+      border: 1.5px solid #FA5555;
+      border-radius: 6px; /* Coins légèrement plus doux */
+      color: #FA5555;
+      font-size: 0.9em;
+      font-weight: 500;
+      line-height: 1;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      background-color: #fff;
+    }
+
+    /* Taille des icônes SVG à l'intérieur du tableau */
+    #myTable a[href^="video/"] svg,
+    #myTable a[href^="pdf/"] svg {
+      width: 16px;
+      height: 16px;
+      stroke: currentColor;
+    }
+
+    #myTable li {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap; /* Évite les dépassements sur petits écrans */
+    }
+
+    #myTable li a[href^="video/"] {
+      margin-left: auto;
+    }
+
+    #myTable,
+    #myTable thead,
+    #myTable tbody,
+    #myTable tr,
+    #myTable th,
+    #myTable td {
+      border: 0 !important;
+    }
+
+    #myTable.table-striped > tbody > tr:nth-of-type(odd),
+    #myTable.table-striped > tbody > tr:nth-of-type(even) {
+      background-color: #fff;
+    }
+
+    /* Effet au survol des boutons du tableau */
+    #myTable a[href^="video/"]:hover,
+    #myTable a[href^="pdf/"]:hover,
+    #myTable a[href^="video/"]:focus,
+    #myTable a[href^="pdf/"]:focus {
+      background-color: #FA5555;
+      color: #fff;
+    }
+  </style>
+
+  <!-- Modernizr JS -->
+  <script src="js/modernizr-2.6.2.min.js"></script>
+  <!-- FOR IE9 below -->
+  <!--[if lt IE 9]>
+  <script src="js/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <!-- Loader -->
+  <div class="fh5co-loader"></div>
+
+  <!-- #fh5co-header -->
+  <section id="fh5co-header">
+    <!-- Menu -->
+    <nav>
+      <ul class="menu">
+        <li>
+          <a href="#">Fonctions langagières</a>
+          <ul class="submenu">
+            <li>
+              <a href="module1.html">Rituels sociaux▶</a>
+              <ul class="submenu">
+                <li><a href="module1.html">Saluer</a></li>
+                <li><a href="module2.html">Remercier</a></li>
+                <li><a href="module3.html">S'excuser</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="module4.html">Indiquer son accord▶</a>
+              <ul class="submenu">
+                <li><a href="module4.html">Accord et désaccord</a></li>
+                <li><a href="module5.html">Negociation</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="module6.html">Exprimer ses émotions▶</a>
+              <ul class="submenu">
+                <li><a href="module6.html">Joie et enthousiasme</a></li>
+                <li><a href="module7.html">Reconfort et encouragement</a></li>
+                <li><a href="module8.html">Surprise, étonnement et incrédulité</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Aspects linguistiques</a>
+          <ul class="submenu">
+            <li><a href="aspects1.html">Registres et conditions d’emplois</a></li>
+            <li><a href="aspects2.html">Combinatoire des PPI</a></li>
+            <li><a href="aspects4.html">Constructions syntaxiques</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="right-menu align-right">
+      <!-- Bouton Transcriptions avec icône Casque moderne -->
+      <a id="btn-transcriptions" class="btn-header-tool" href="transcriptions.html">
+        <svg class="header-tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
+          <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3z"></path>
+          <path d="M3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path>
+        </svg>
+        <span>Transcriptions</span>
+      </a>
+
+      <!-- Bouton En savoir plus avec icône Flèche sortante -->
+      <a id="btn-apropos" class="btn-header-tool" href="apropos.html">
+        <span>En savoir plus</span>
+        <svg class="header-tool-icon icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="7" y1="17" x2="17" y2="7"></line>
+          <polyline points="7 7 17 7 17 17"></polyline>
+        </svg>
+      </a>
+    </div>
+
+    <ul id="fh5co-logo">
+      <a href="index.html">PREFAB<span>.FLE</span></a>
+    </ul>
+  </section>
+
+  <!-- SECTION TABLEAU -->
+  <section id="fh5co-hero" style="background-image: url(images/search.png); background-size: cover; background-position: center; min-height: 100vh; display: flex; align-items: flex-start; justify-content: center; position: relative; padding: 100px 20px 60px 20px;">
+    
+    <div class="fh5co-overlay" style="background: transparent !important; position: absolute; top:0; left:0; width:100%; height:100%; z-index: 1;"></div>
+
+    <div class="container" style="position: relative; z-index: 2; max-width: 1140px;">
+      <div style="background-color: rgba(255, 255, 255, 0.95); padding: 40px; border-radius: 8px; box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);">
+        
+        <div style="margin-bottom: 25px;">
+          <h2 style="color:#FA5555; margin-bottom: 10px; font-weight: bold;">Transcriptions avec audios et vidéos</h2>
+          <p style="font-size: 1.1em; color: #333; line-height: 1.6;">
+            Cette page rassemble les fichiers multimédias que nous avons exploités dans les vidéos et les activités, ainsi que les transcriptions des tutoriels. Cliquez sur les liens audio, vidéo ou PDF pour télécharger les fichiers correspondants.
+          </p>
+        </div>
+
+        <div style="margin-bottom: 25px;">
+          <input type="text" id="searchInput" placeholder="Rechercher une ressource, un thème..." onkeyup="filterTable()" style="padding: 10px; width: 100%; max-width: 400px; border: 1px solid #ddd; border-radius: 4px; background: #fff;">
+        </div>
+
+        <table id="myTable" class="table table-bordered table-striped" style="font-size:16px; border-collapse:collapse; width:100%; border-color: #FA5555; background: #fff;">
+          <thead style="background-color: #FA5555; color: white;">
+            <tr>
+              <th style="width:25%;">Thème</th>
+              <th style="width:25%;">Sous-thème</th>
+              <th style="width:50%;">Ressources</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Être poli·e en français</strong></td>
+              <td style="text-align:left;">Pour se dire bonjour</td>
+              <td>
+                <ul style="padding-left: 20px; line-height: 1.8; margin:0;">
+                  <li>Accueil des amis : 
+                    <a href="video/ouverture/amies.mp4" download><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></a> 
+                    <a href="pdf/ouverture/Extrait 1 _ accueil des amis .pdf" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg></a> 
+                  </li>
+                  <li>Prise de rendez-vous : 
+                    <a href="video/ouverture/pret.mp4" download><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></a> 
+                    <a href="pdf/ouverture/Extrait 2 _ prise de rendez-vous .pdf" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg></a>
+                  </li>
+                  <li>Message vocal : 
+                    <a href="video/ouverture/vocal.mp4" download><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></a> 
+                    <a href="pdf/ouverture/Extrait 3 _ message vocal.pdf" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg></a>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td style="text-align:left;">Pour se dire au revoir</td>
+              <td>
+                <ul style="padding-left: 20px; line-height: 1.8; margin:0;">
+                  <li>Prise de rendez-vous :
+                    <a href="video/cloture/pret1.mp4" download><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></a>
+                    <a href="pdf/cloture/Extrait 1 _ la prise de rendez-vous.pdf" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg></a>
+                  </li>
+                  <li>A la boulangerie :
+                    <a href="video/cloture/boulangerie.mp4" download><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></a>
+                    <a href="pdf/cloture/Extrait 2 _ à la boulangerie.pdf" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg></a>
+                  </li>
+                  <li>Au magasin :
+                    <a href="video/cloture/aurevoir.mp4" download><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></a>
+                    <a href="pdf/cloture/Extrait 3 _ dire au revoir.pdf" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg></a>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+
+            <tr>
+              <td></td>
+              <td style="text-align:left;">Remercier</td>
+              <td>
+                <ul style="padding-left: 20px; line-height: 1.8; margin:0;">
+                  <li>Journal télévisé :
+                    <a href="video/remercier 1/journal télévisé.mp4" download><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></a>
+                    <a href="pdf/remercier 1/Transcription _journal télévisé_.pdf" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg></a>
+                  </li>
+                  <li>Message vocal à une amie :
+                    <a href="video/remercier 1/message vocal à une amie.mp4" download><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></a>
+                    <a href="pdf/remercier 1/Transcription _message vocal à une amie_.pdf" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg></a>
+                  </li>
+                  <li>Dans un bar :
+                    <a href="video/remercier 1/dans un bar.mp4" download><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></a>
+                    <a href="pdf/remercier 1/Transcription _dans un bar_.pdf" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg></a>
+                  </li>
+                  <li>A l'accueil du service universitaire des sports :
+                    <a href="video/remercier 2/à l'accueil du service universitaire des sports.mp4" download><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></a>
+                    <a href="pdf/remercier 2/Transcription _à l'accueil du service universitaire des sports_.pdf" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg></a>
+                  </li>
+                  <li>A l'accueil du cinéma :
+                    <a href="video/remercier 2/à l'accueil du cinéma.mp4" download><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></a>
+                    <a href="pdf/remercier 2/Transcription _à l'accueil du cinéma_.pdf" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg></a>
+                  </li>
+                  <li>Dans une épicerie à la ferme :
+                    <a href="video/remercier 2/dans une épicerie à la ferme.mp4" download><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></a>
+                    <a href="pdf/remercier 2/Transcription _dans une épicerie à la ferme_.pdf" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg></a>
+                  </li>
+                  <li>Chez la voisine :
+                    <a href="video/remercier 2/chez la voisine.mp4" download><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></a>
+                    <a href="pdf/remercier 2/Transcription _chez la voisine_.pdf" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg></a>
+                  </li>
+                  <li>Conversation téléphonique entre amis :
+                    <a href="video/remercier 2/conversation téléphonique entre amis.mp4" download><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></a>
+                    <a href="pdf/remercier 2/Transcription _conversation téléphonique entre amis_.pdf" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg></a>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+
+            <tr>
+              <td></td>
+              <td style="text-align:left;">Merci</td>
+              <td>
+                <ul style="padding-left: 20px; line-height: 1.8; margin:0;">
+                  <li>A la borne de Vélib :
+                    <a href="video/merci 1/à la borne de Vélib deux filles.mp4" download><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></a>
+                    <a href="pdf/merci 1/Transcription _à la borne de Vélib deux filles_.pdf" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg></a>
+                  </li>
+                  <li>Dans une résidence universitaire :
+                    <a href="video/merci 1/secrétaire et étudiante dans une résidence universitaire.mp4" download><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></a>
+                    <a href="pdf/merci 1/Transcription _secrétaire et étudiante dans une résidence universitaire_.pdf" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg></a>
+                  </li>
+                  <li>Dans un salon de beauté :
+                    <a href="video/merci 1/salon de beauté (client et receptionniste.mp4" download><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></a>
+                    <a href="pdf/merci 1/Transcription _salon de beauté (client et réceptionniste)_.pdf" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg></a>
+                  </li>
+                  <li>Enregistrement automatique au téléphone :
+                    <a href="video/merci 2/enregistrement automatique au téléphone.mp4" download><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></a>
+                    <a href="pdf/merci 2/Transcription _enregistrement automatique au téléphone_.pdf" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg></a>
+                  </li>
+                  <li>Dans un restaurant :
+                    <a href="video/merci 2/dans un resto.mp4" download><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></a>
+                    <a href="pdf/merci 2/Transcription _dans un resto_ (1).pdf" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg></a>
+                  </li>
+                  <li>Conversation entre une fille et sa mère :
+                    <a href="video/merci 2/conversation entre fille et sa mère.mp4" download><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></a>
+                    <a href="pdf/merci 2/Transcription _conversation entre fille et sa mère_.pdf" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg></a>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+
+            <tr>
+              <td></td>
+              <td style="text-align:left;">S'excuser</td>
+              <td>
+                <ul style="padding-left: 20px; line-height: 1.8; margin:0;">
+                  <li>Message vocal à une amie :
+                    <a href="video/excuse/vocal ami.mp4" download><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></a>
+                    <a href="pdf/excuse/vocal amie.pdf" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg></a>
+                  </li>
+                  <li>Dans une conférence :
+                    <a href="video/excuse/conférence.mp4" download><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></a>
+                    <a href="pdf/excuse/conférence.pdf" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg></a>
+                  </li>
+                  <li>Dans une librairie :
+                    <a href="video/excuse/librairie.mp4" download><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></a>
+                    <a href="pdf/excuse/librairie.pdf" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg></a>
+                  </li>
+                  <li>Chez une kinésithérapeute :
+                    <a href="video/excuse/kine.mp4" download><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></a>
+                    <a href="pdf/excuse/kine.pdf" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg></a>
+                  </li>
+                  <li>Explications des épreuves du DELF :
+                    <a href="video/excuse/delf.mp4" download><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></a>
+                    <a href="pdf/excuse/delf.pdf" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg></a>
+                  </li>
+                  <li>Lors d’une inscription pédagogique :
+                    <a href="video/excuse/inscription.mp4" download><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></a>
+                    <a href="pdf/excuse/inscription.pdf" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg></a>
+                  </li>
+                  <li>Conversation entre amies :
+                    <a href="video/excuse/amis.mp4" download><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></a>
+                    <a href="pdf/excuse/amies.pdf" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg></a>
+                  </li>
+                  <li>Lors d’une prise de rendez-vous médicale :
+                    <a href="video/excuse/rdv.mp4" download><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></a>
+                    <a href="pdf/excuse/rdv.pdf" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg></a>
+                  </li>
+                  <li>Lors d’un débat politique :
+                    <a href="video/excuse/debat.mp4" download><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></a>
+                    <a href="pdf/excuse/debat.pdf" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg></a>
+                  </li>
+                  <li>Message vocal à une amie (Nono) :
+                    <a href="video/excuse/nono.mp4" download><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg></a>
+                    <a href="pdf/excuse/nono.pdf" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg></a>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="fh5co-footer" style="background-color: #222; color: #fff; padding: 20px 0; text-align: center;">
+    <div class="container">
+      <p style="margin-bottom: 5px; font-weight: bold;">PREFAB.FLE</p>
+      <p style="margin-bottom: 5px; color: #bbb;">LIDILEM (Grenoble) & ICAR (Lyon)</p>
+      <hr style="border-color: #444; width: 50%; margin: 15px auto;">
+      <p style="font-size: 0.85em; color: #888; margin: 0;">
+        &copy; 2026 <a href="index.html" style="color: #fff; text-decoration: none;">PREFAB-FLE</a> — Tous droits réservés.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scripts Javascript -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.flexslider-min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/magnific-popup-options.js"></script>
+  <script src="js/main.js"></script>
+
+  <script>
+    function filterTable() {
+      const input = document.getElementById("searchInput");
+      const filter = input.value.toLowerCase();
+      const table = document.getElementById("myTable");
+      const tr = table.getElementsByTagName("tr");
+
+      for (let i = 1; i < tr.length; i++) {
+        let txtValue = tr[i].textContent || tr[i].innerText;
+        if (txtValue.toLowerCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }
+    }
+  </script>
+</body>
+</html>

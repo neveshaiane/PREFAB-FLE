@@ -20,12 +20,14 @@
 	<link rel="stylesheet" href="css/bootstrap.css">
 
 	<link rel="stylesheet" href="css/red.css">
+	<style>
+		#fh5co-about {
+			padding-bottom: 0;
+		}
+	</style>
 	<script src="js/modernizr-2.6.2.min.js"></script>
 
 	</head>
-
-
-
 	<body>
 
 	<!-- Loader -->
@@ -44,7 +46,7 @@
             <ul class="submenu">
               <li><a href="module1.html">Saluer</a></li>
               <li><a href="module2.html">Remercier</a></li>
-              <li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">S'excuser</a></li>
+             <li><a href="module3.html">S'excuser</a></li>
             </ul>
           </li>
           <li>
@@ -74,20 +76,30 @@
         </ul>
       </li>
   </nav>
+<div class="right-menu align-right">
+  <!-- Bouton Transcriptions avec icône Casque moderne -->
+  <a id="btn-transcriptions" class="btn-header-tool" href="transcriptions.html">
+    <svg class="header-tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
+      <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3z"></path>
+      <path d="M3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path>
+    </svg>
+    <span>Transcriptions</span>
+  </a>
 
-  <div class="right-menu align-right">
-          <button id="btn-glossaire" class="btn btn-primary" onclick="toggleGlossary()">
-            Glossaire
-          </button>
-          
-          <a id="btn-apropos" href="apropos.html" class="btn btn-primary">
-            À propos
-          </a>
-        </div>
-        
-        <ul id="fh5co-logo">
-          <a href="index.html">PREFAB<span>.FLE</span></a>
-    </ul>
+  <!-- Bouton En savoir plus avec icône Flèche sortante (style moderne) -->
+  <a id="btn-apropos" class="btn-header-tool" href="apropos.html">
+    <span>En savoir plus</span>
+    <svg class="header-tool-icon icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <line x1="7" y1="17" x2="17" y2="7"></line>
+      <polyline points="7 7 17 7 17 17"></polyline>
+    </svg>
+  </a>
+</div>
+
+<ul id="fh5co-logo">
+  <a href="index.html">PREFAB<span>.FLE</span></a>
+</ul>
   </section>
 
 
@@ -104,7 +116,7 @@
 						-->
 						<!-- a modifier peut-être-->
 						<div style="width: 100%; display: flex; justify-content: center; margin: 32px 0 0 0;">
-						<button class="btn btn-primary" onclick="document.getElementById('videointro').scrollIntoView({ behavior: 'smooth' })">S'entraîner</button>
+            <button class="btn btn-primary" style="font-size: 2rem; height: 65px;"onclick="document.getElementById('videointro').scrollIntoView({ behavior: 'smooth' })">S'entraîner</button>
 					</div>
             </div>
 					</div>
@@ -366,7 +378,7 @@ Invité : Bon, bah, écoute, c'est vachement sympa.
 <div class="completion-message" id="completion-message" style="background: #fff; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); margin: 40px auto 32px auto; max-width: 600px; padding: 32px 24px; opacity: 0; pointer-events: none; transition: opacity 0.7s;">
 	<div class="text-center">
   <p> Vous avez terminé cette capsule d'apprentissage. ✅ </p>  
-  <button onclick="window.location.href='module1.html'"class="btn btn-primary">Passer au prochain chapitre</button></div>
+  <button onclick="window.location.href='module1.html'"class="btn btn-primary">Chapitre suivant →</button></div>
 </div>
 </div>
 <script>
@@ -410,9 +422,7 @@ observer.observe(completion);
 <li><strong>Ça me saoule</strong> (aussi écrit "ça me soule") : Dire que quelque chose fatigue. Familière, agacement.</li>
 		</ul>
 	</div>
-
 	<script>
-
 		function playVideo() {
 				const videoContainer = document.getElementById('videointro');
 				videoContainer.innerHTML = `
@@ -484,30 +494,18 @@ function closeTranscription() {
 		});
 	});
 		</script>
-		<footer id="fh5co-footer">
-			<div class="container">
-				<div class="row row-bottom-padded-md">
-
-					<div class="col-md-3 col-sm-6 col-xs-12 animate-box">
-						<div class="fh5co-footer-widget">
-							<ul class="fh5co-links">
-								<li><a href="apropos.html">À propos</a></li>
-							</ul>
-						</div>
-					</div>
-
-					<div class="col-md-3 col-sm-6 col-xs-12 animate-box">
-						<div class="fh5co-footer-widget">
-							<h3>Contactez-nous</h3>
-							<p>
-								<p>PREFAB © 2025</p>
-								<p>LIDILEM, GRENOBLE & ICAR, LYON</p>
-                <p class="fh5co-left"><small>&copy; 2025 <a href="index.html">PREFAB-FLE</a></small></p>
-							</p>
-						</div>
-					</div>
-				</div>
-		</footer>
+	<footer id="fh5co-footer" style="background-color: #222; color: #fff; padding: 20px 0; text-align: center;">
+		<div class="container">
+			<!-- Informations du projet -->
+			<p style="margin-bottom: 5px; font-weight: bold;">PREFAB.FLE</p>
+			<p style="margin-bottom: 5px; color: #bbb;">LIDILEM (Grenoble) & ICAR (Lyon)</p>
+			<hr style="border-color: #444; width: 50%; margin: 15px auto;">
+			<!-- Copyright -->
+			<p style="font-size: 0.85em; color: #888; margin: 0;">
+				&copy; 2026 <a href="index.html" style="color: #fff; text-decoration: none;">PREFAB-FLE</a> — Tous droits réservés.
+			</p>
+		</div>
+	</footer>
 <!-- END #fh5co-footer -->
 </div>
 <!-- END #fh5co-page -->
@@ -526,10 +524,8 @@ function closeTranscription() {
 		<script src="js/jquery.magnific-popup.min.js"></script>
 		<script src="js/magnific-popup-options.js"></script>
 	
-	
 		<!-- Main JS (Do not remove) -->
 		<script src="js/main.js"></script>
-	
 		<!-- Fermer le menu latéral mobile (offcanvas) -->
 <script>
 // Suppression du script d'ajout du bouton "fermer" pour le menu latéral mobile

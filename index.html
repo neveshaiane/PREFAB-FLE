@@ -6,7 +6,7 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>PREFAB &mdash;</title>
+	<title>PREFAB-FLE</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
 	<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
@@ -39,6 +39,198 @@
 	<!-- Bootstrap  -->
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/red.css">
+	<style>
+		#menu-toggle {
+			position: relative;
+			z-index: 1001;
+			margin: 8px 0 0 20px;
+			padding: 8px 16px;
+			border: 0;
+			border-radius: 20px;
+			background: #495057;
+			color: #fff;
+			font-size: 2rem;
+		}
+
+		#menu-toggle:hover,
+		#menu-toggle:focus {
+			background: #343a40;
+			outline: none;
+		}
+
+		#menu-toggle .menu-icon {
+			margin-right: 6px;
+			font-size: 18px;
+			line-height: 0;
+			vertical-align: -2px;
+		}
+
+		#menu-overlay {
+			display: none;
+			position: fixed;
+			z-index: 1000;
+			inset: 0;
+			background: rgba(0, 0, 0, .45);
+		}
+
+		#menu-overlay.is-visible {
+			display: block;
+		}
+
+		#menu-compact {
+			position: fixed;
+			z-index: 1002;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			width: 320px;
+			max-width: 90vw;
+			padding: 20px;
+			background: #f8f9fa;
+			box-shadow: 3px 0 12px rgba(0, 0, 0, .2);
+			overflow-y: auto;
+			transform: translateX(-105%);
+			transition: transform .25s ease;
+		}
+
+		#menu-compact.is-open {
+			transform: translateX(0);
+		}
+
+		.menu-compact-header {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding-bottom: 12px;
+			border-bottom: 1px solid #dee2e6;
+		}
+
+		.menu-compact-header h2 {
+			margin: 0;
+			color: #6c757d;
+			font-size: 16px;
+			font-weight: 700;
+			text-transform: uppercase;
+		}
+
+		.menu-close {
+			border: 0;
+			background: transparent;
+			color: #6c757d;
+			font-size: 40px;
+			line-height: 1;
+			transition: all .2s ease-in-out;
+		}
+
+		.menu-close:hover,
+		.menu-close:focus {
+			background: transparent;
+			color: #24272b;
+			font-weight: 700;
+			text-decoration: none;
+			transform: translateY(-1px);
+			}  
+
+		.menu-tab:hover,
+		.menu-tab:focus {
+			background: transparent;
+			color: #24272b;
+			font-weight: 700;
+			text-decoration: none;
+			transform: translateY(-1px);
+			}  
+		.menu-tabs {
+		display: flex;
+		gap: 8px;
+		margin: 20px 0 12px;
+		}
+
+		.menu-tab {
+			flex: 1;
+			/* Supprime le fond, les bordures et l'apparence par défaut */
+			background: none;
+			border: none;
+			padding: 0;
+			
+			color: #6c757d;
+			font-size: 24px;
+			cursor: pointer;
+			text-align: center;
+		}
+
+		.menu-tab.is-active {
+			/* Différencie l'onglet actif uniquement par la couleur ou le gras */
+			background: none;
+			color: #495057;
+			font-weight: bold;
+		}
+
+		.menu-panel {
+			display: none;
+		}
+
+		.menu-panel.is-active {
+			display: block;
+		}
+
+		.menu-group {
+			border-bottom: 1px solid #e2e6ea;
+		}
+
+		.menu-group-toggle {
+			display: block;
+			width: 100%;
+			padding: 11px 4px;
+			border: 0;
+			background: transparent;
+			color: #212529;
+			font-weight: 900;
+			text-align: left;
+		}
+
+		.menu-group-toggle::after {
+			float: right;
+			content: '+';
+			font-size: 20px;
+			font-weight: 400;
+		}
+
+		.menu-group.is-open .menu-group-toggle::after {
+			content: '-';
+		}
+
+		.menu-group-links {
+			display: none;
+			padding: 0 0 8px 15px;
+		}
+
+		.menu-group.is-open .menu-group-links {
+			display: block;
+		}
+
+		.menu-group-links a,
+		.menu-aspects a {
+			display: block;
+			padding: 6px 4px;
+			color: #333;
+			font-size: 18px;
+		}
+
+		.menu-group-links a:hover,
+		.menu-aspects a:hover {
+			border-radius: 4px;
+			background: #e9ecef;
+			color: #000;
+		}
+
+		.menu-coming-soon .menu-group-links span {
+			display: block;
+			padding: 6px 4px;
+			color: rgba(255, 255, 255, .55);
+			font-style: italic;
+			cursor: default;
+		}
+	</style>
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
 
@@ -49,57 +241,77 @@
 	<div class="fh5co-loader"></div>
 	<!-- #fh5co-header -->
   	<section id="fh5co-header">
-  <nav>
-    <ul class="menu">
-      <li>
-        <a href="#">Fonctions langagières</a>
-        <ul class="submenu">
-          <li>
-            <a href="module1.html">Rituels sociaux▶</a>
-            <ul class="submenu">
-              <li><a href="module1.html">Saluer</a></li>
-              <li><a href="module2.html">Remercier</a></li>
-             <li><a href="module3.html">S'excuser</a></li>
-            </ul>
-          </li>
-          <li>
-        <a href="module4.html">Indiquer son accord▶</a>
-          <ul class="submenu">
-               <li><a href="module4.html">Accord et désaccord</a></li>
-              <li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Negociation</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Exprimer une émotion▶</a>
-            <ul class="submenu">
-              <li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Joie et Enthousiasme</a></li>
-              <li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Reconfort et Encouragement</a></li>
-              <li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Surprise, étonnement et incrédulité</a></li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <a href="#">Aspects linguistiques</a>
-        <ul class="submenu">
-          <li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Registres et conditions d’emplois</a></li>
-          <li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Combinatoire des PPI</a></li>
-          <li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Aspects conversationnels</a></li>
-          <li><a href="" class="btn-disabled" tabindex="-1" aria-disabled="true">Constructions syntaxiques</a></li>
-        </ul>
-      </li>
+ <nav>
+	<button id="menu-toggle" type="button" aria-controls="menu-compact" aria-expanded="false">
+		<span class="menu-icon" aria-hidden="true">☰</span> Menu
+	</button>
   </nav>
 
-  <div class="right-menu align-right">
-          <a id="btn-glossaire" class="btn btn-primary" href="glossaire.html">Glossaire</a>
-          <a id="btn-apropos" href="apropos.html" class="btn btn-primary">
-            À propos
-          </a>
-        </div>
-        
-        <ul id="fh5co-logo">
-          <a href="index.html">PREFAB<span>.FLE</span></a>
-    </ul>
+	<div id="menu-overlay" aria-hidden="true"></div>
+	<aside id="menu-compact" aria-hidden="true" aria-label="Menu principal">
+		<div class="menu-compact-header">
+			<h1></h1>
+			<button class="menu-close" type="button" aria-label="Fermer le menu">&times;</button>
+		</div>
+
+		<div class="menu-tabs" role="tablist" aria-label="Rubriques principales">
+			<button class="menu-tab is-active" type="button" role="tab" aria-selected="true" data-menu-panel="fonctions-panel">Fonctions langagières</button>
+			<button class="menu-tab" type="button" role="tab" aria-selected="false" data-menu-panel="aspects-panel">Aspects linguistiques</button>
+		</div>
+
+		<div id="fonctions-panel" class="menu-panel is-active" role="tabpanel">
+			<div class="menu-group">
+				<button class="menu-group-toggle" type="button" aria-expanded="true">Rituels sociaux</button>
+				<div class="menu-group-links">
+					<a href="module1.html">Saluer</a>
+					<a href="module2.html">Remercier</a>
+					<a href="module3.html">S’excuser</a>
+				</div>
+			</div>
+			<div class="menu-group">
+				<button class="menu-group-toggle" type="button" aria-expanded="false">Indiquer son accord</button>
+				<div class="menu-group-links menu-coming-soon">
+					<span>À venir</span>
+				</div>
+			</div>
+			<div class="menu-group">
+				<button class="menu-group-toggle" type="button" aria-expanded="false">Exprimer ses émotions</button>
+				<div class="menu-group-links menu-coming-soon">
+					<span>À venir</span>
+				</div>
+			</div>
+		</div>
+
+		<div id="aspects-panel" class="menu-panel menu-aspects" role="tabpanel" aria-selected="true" > 
+			<a href="aspects1.html">Registres et conditions d’emplois</a>
+			<a href="aspects2.html">Combinatoire des PPI</a>
+			<a href="aspects4.html">Constructions syntaxiques</a>
+		</div>
+	</aside>
+<div class="right-menu align-right">
+  <!-- Bouton Transcriptions avec icône Casque moderne -->
+  <a id="btn-transcriptions" class="btn-header-tool" href="transcriptions.html">
+    <svg class="header-tool-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
+      <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3z"></path>
+      <path d="M3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path>
+    </svg>
+    <span>Transcriptions</span>
+  </a>
+
+  <!-- Bouton En savoir plus avec icône Flèche sortante (style moderne) -->
+  <a id="btn-apropos" class="btn-header-tool" href="apropos.html">
+    <span>En savoir plus</span>
+    <svg class="header-tool-icon icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <line x1="7" y1="17" x2="17" y2="7"></line>
+      <polyline points="7 7 17 7 17 17"></polyline>
+    </svg>
+  </a>
+</div>
+
+<ul id="fh5co-logo">
+  <a href="index.html">PREFAB<span>.FLE</span></a>
+</ul>
 
   </section>
         <!-- #fh5co-header -->
@@ -109,13 +321,11 @@
 			<div class="container">
 				<div class="fh5co-intro js-fullheight">
 					<div class="fh5co-intro-text">
-						<div class="fh5co-left-position">
-							<h3 class="animate-box" style="font-size: 5.2rem; left: auto; text-align: leftr; line-height: 1.2;">Les phrases<br>préfabriquées<br>des interactions</h3>
-				  		<div>
-					</div>
-				<a id="btn-commencer" href="intro.html" style="font-size: 1.6rem; height: 60px; min-width: unset;" class="btn btn-primary">Commencer</a>
-				<a id="btn-ppis" href="#" onclick="togglePpiInfo()" style="font-size: 1.6rem; height: 60px; min-width: unset;" class="btn btn-primary">Les PPI, c'est quoi ?</a>
-
+						<div class="*">
+				<h1 class="animate-box" style="font-size: 5.2rem; left: auto; text-align: left; line-height: 1.2; color: #ffffff;">Les phrases<br>préfabriquées<br>des interactions</h1>				  		<div>
+				</div>
+				<a id="btn-commencer" href="introduction_activites.html" style="font-size: 2rem; height: 65px; min-width: unset;" class="btn btn-primary">Commencer</a>
+				<a id="btn-ppis" href="#" onclick="togglePpiInfo()" style="font-size: 2rem; height: 65px; min-width: unset;" class="btn btn-primary">Les PPI, c'est quoi ?</a>
 				</div>
 			</div>
 			<div class="fh5co-learn-more animate-box" style="display: flex; justify-content: space-between; align-items: center;">
@@ -137,6 +347,7 @@
                                 <ul>
                                     <li><a href="intro.html#videointro">Une vidéo qui présente ce que sont les phrases toutes faites</a></li>
                                     <li><a href="intro.html#activite1">Activités – introduction aux phrases toutes faites</a></li>
+<li style="list-style-type:none; height:3.3em; padding:0; margin:0;"></li>
                                 </ul>
                             </div>
                         </div>
@@ -148,8 +359,8 @@
                                     <li><a href="module1.html#fh5co-projects">Dire bonjour</a></li>
                                     <li><a href="module1.html#fh5co-about">Activités – dire bonjour</a></li>
                                     <li><a href="module1.html#video_salut_cloture">Dire au revoir</a></li>
-                                    <li><a href="module1.html#sal_cloture">Activités – dire au revoir</a></li>
-									<li><a href="module2.html">Remercier : au-delà du simple “merci”</a></li>
+                                    <li><a href="module1.html#act_cloture">Activités – dire au revoir</a></li>
+									<li><a href="module2.html#fh5co-projects">Remercier : au-delà du simple “merci”</a></li>
 									<li><a href="module2.html#activitesremercier">Activités – remercier</a></li></li>
 									<li><a href="module3.html">Présenter ses excuses</a></li>
 									<li><a href="module3.html#activitesexcuses">Activités - s'excuser</a></li>
@@ -163,39 +374,91 @@
                         <div class="fh5co-feature animate-box">
                             <div class="fh5co-icon"><i class="icon-toggle"></i></div>
                             <div class="fh5co-text">
-                                <h3>3.  Exprimer ses émotions</h3>
+                                <h3>3.  Indiquer son accord - À venir</h3>
                                 <ul>
-                                    <li>Surprise</li>
-                                    <li>Activités – surprise</li>
-                                    <li>Joie</li>
-                                    <li>Activités – joie</li>
-                                    <li>Colère</li>
-                                    <li>Activités – colère</li>
+									<li class="coming-soon-item">Dire qu’on est d’accord… ou pas</li>									
+									<li class="coming-soon-item">Activités – accord/désaccord</li>
+									<li class="coming-soon-item">Négocier</li>
+									<li class="coming-soon-item">Activités – négocier</li>
                                 </ul>
                             </div>
                         </div>
                         <div class="fh5co-feature animate-box">
                             <div class="fh5co-icon"><i class="icon-toggle"></i></div>
                             <div class="fh5co-text">
-                                <h3>4.  Participer à une discussion</h3>
+								  <h3>4.  Exprimer ses émotions - À venir</h3>
                                 <ul>
-                                    <li>Dire qu’on est d’accord… ou pas.</li>
-                                    <li>Activités – accord/désaccord</li>
-                                    <li>Savoir négocier </li>
-                                    <li>Activités – savoir négocier</li>
-                                </ul>
-                            </div>
+									<li class="coming-soon-item">Joie et enthousiasme</li>									
+									<li class="coming-soon-item">Activités – joie et enthousiasme</li>
+									<li class="coming-soon-item">Reconfort et encouragement</li>
+									<li class="coming-soon-item">Activités – reconfort et encouragement</li>
+									<li class="coming-soon-item">Surprise, étonnement et incrédulité</li>
+									<li class="coming-soon-item">Activités – surprise, étonnement et incrédulité</li>
+                                 </ul>
+								</div>
                         </div>
                     </div>
                 </div>
             </div>
 			<div style="text-align: center;">
 				<div class="fh5co-btn-action animate-box" style="position: relative; left: -100px;">
-				<a href="#" class="btn btn-primary btn-cta" onclick="window.location.href='introduction_activites.html#videointro'">C'est parti !</a>
+				<a href="#" style="font-size: 2rem; height: 65px;" class="btn btn-primary btn-cta" onclick="window.location.href='introduction_activites.html'">C'est parti !</a>
 				</div>
 			</div>
         </section>
 		<script>
+		const menuToggle = document.getElementById('menu-toggle');
+		const menuCompact = document.getElementById('menu-compact');
+		const menuOverlay = document.getElementById('menu-overlay');
+		const menuClose = document.querySelector('.menu-close');
+
+		function setMenuOpen(isOpen) {
+			menuCompact.classList.toggle('is-open', isOpen);
+			menuOverlay.classList.toggle('is-visible', isOpen);
+			menuToggle.setAttribute('aria-expanded', String(isOpen));
+			menuCompact.setAttribute('aria-hidden', String(!isOpen));
+			menuOverlay.setAttribute('aria-hidden', String(!isOpen));
+			document.body.style.overflow = isOpen ? 'hidden' : '';
+		}
+
+		menuToggle.addEventListener('click', function() {
+			setMenuOpen(!menuCompact.classList.contains('is-open'));
+		});
+		menuClose.addEventListener('click', function() {
+			setMenuOpen(false);
+		});
+		menuOverlay.addEventListener('click', function() {
+			setMenuOpen(false);
+		});
+		document.addEventListener('keydown', function(event) {
+			if (event.key === 'Escape') {
+				setMenuOpen(false);
+			}
+		});
+
+		document.querySelectorAll('.menu-tab').forEach(function(tab) {
+			tab.addEventListener('click', function() {
+				document.querySelectorAll('.menu-tab').forEach(function(otherTab) {
+					otherTab.classList.remove('is-active');
+					otherTab.setAttribute('aria-selected', 'false');
+				});
+				document.querySelectorAll('.menu-panel').forEach(function(panel) {
+					panel.classList.remove('is-active');
+				});
+				tab.classList.add('is-active');
+				tab.setAttribute('aria-selected', 'true');
+				document.getElementById(tab.dataset.menuPanel).classList.add('is-active');
+			});
+		});
+
+		document.querySelectorAll('.menu-group-toggle').forEach(function(toggle) {
+			toggle.addEventListener('click', function() {
+				const group = toggle.parentElement;
+				const isOpen = group.classList.toggle('is-open');
+				toggle.setAttribute('aria-expanded', String(isOpen));
+			});
+		});
+
 document.querySelectorAll('.dropdown > a').forEach(function(link) {
     link.addEventListener('click', function(e) {
         e.preventDefault();
@@ -223,7 +486,7 @@ document.querySelectorAll('.dropdown-sub > a').forEach(function(link) {
 		</ul>
 	</div>
 
-	<div id="ppi-info" style="display: none; position: fixed; top: 10%; left: 10%; width: 80%; max-width: 600px; background: white; padding: 20px; border-radius: 10px; z-index: 9999;">
+	<div id="ppi-info" style="display: none; position: fixed; top: 20%; left: 10%; width: 80%; max-width: 600px; background: white; padding: 20px; border-radius: 10px; z-index: 9999;">
 		<button class="close-btn" onclick="togglePpiInfo()">×</button>
 		<h3>Les PPI, c'est quoi&nbsp; ?</h3>
 		<p> Les <strong>phrases préfabriquées des interactions</strong> sont des formules de la conversation toutes faites qu’on utilise souvent quand on parle avec les autres, surtout dans des situations courantes.<br>
@@ -269,32 +532,22 @@ document.querySelectorAll('.dropdown-sub > a').forEach(function(link) {
 
 		</section>
 		<!-- END #fh5co-projects -->
-		
-		<footer id="fh5co-footer">
-			<div class="container">
-				<div class="row row-bottom-padded-md">
+	<footer id="fh5co-footer" style="background-color: #222; color: #fff; padding: 20px 0; text-align: center;">
+		<div class="container">
+			
+			<!-- Informations du projet -->
+			<p style="margin-bottom: 5px; font-weight: bold;">PREFAB.FLE</p>
+			<p style="margin-bottom: 5px; color: #bbb;">LIDILEM (Grenoble) & ICAR (Lyon)</p>
+			
+			<hr style="border-color: #444; width: 50%; margin: 15px auto;">
 
-					<div class="col-md-3 col-sm-6 col-xs-12 animate-box">
-						<div class="fh5co-footer-widget">
-							<ul class="fh5co-links">
-								<li><a href="apropos.html">A propos</a></li>
-								<li><a href="credits.html">Credits</a></li>
-							</ul>
-						</div>
-					</div>
+			<!-- Copyright -->
+			<p style="font-size: 0.85em; color: #888; margin: 0;">
+				&copy; 2026 <a href="index.html" style="color: #fff; text-decoration: none;">PREFAB-FLE</a> — Tous droits réservés.
+			</p>
 
-					<div class="col-md-3 col-sm-6 col-xs-12 animate-box">
-						<div class="fh5co-footer-widget">
-							<h3>Contactez-nous</h3>
-							<p>
-								<p>PREFAB © 2025</p>
-								<p>LIDILEM, GRENOBLE & ICAR, LYON</p>
-                <p class="fh5co-left"><small>&copy; 2025 <a href="index.html">PREFAB-FLE</a></small></p>
-							</p>
-						</div>
-					</div>
-				</div>
-		</footer>
+		</div>
+	</footer>
 		<!-- END #fh5co-footer -->
 	</div>
 	<!-- END #fh5co-page -->

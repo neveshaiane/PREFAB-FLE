@@ -1,22 +1,24 @@
 <!DOCTYPE html>
-<html class="no-js"> 
-	<head>
+<html class="no-js">
+
+<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Activités</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Free HTML5 Template by FREEHTML5.CO" />
-	<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
-	<meta name="author" content="FREEHTML5.CO" />
+	<meta name="description" content="shaianeneves" />
+	<meta name="keywords" content="shaianeneves" />
+	<meta name="author" content="shaiananeves" />
 
 	<link rel="shortcut icon" href="favicon.ico">
 
-	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,600,400italic,700' rel='stylesheet' type='text/css'>
-	
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,600,400italic,700' rel='stylesheet'
+		type='text/css'>
+
 	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="css/flexslider.css">
 	<link rel="stylesheet" href="css/icomoon.css">
-	<link rel="stylesheet" href="css/magnific-popup.css">  
+	<link rel="stylesheet" href="css/magnific-popup.css">
 	<link rel="stylesheet" href="css/bootstrap.css">
 
 	<link rel="stylesheet" href="css/red.css">
@@ -31,39 +33,30 @@
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 
-	</head>
+</head>
 
-
-	<!-- 
-		INFO:
-		Add 'boxed' class to body element to make the layout as boxed style.
-		Example: 
-		<body class="boxed">	
-	-->
-	<body>
+<body>
 
 	<!-- Loader -->
 	<div class="fh5co-loader"></div>
 	<div id="fh5co-page">
 		<section id="fh5co-header">
-		  <div class="container">
-			<nav role="navigation">
+			<div class="container">
+				<nav role="navigation">
 					<div class="right-menu align-right">
-					  <button id="btn-glossaire" class="btn btn-primary" onclick="toggleGlossary()">Glossaire</button>
-					  <button id="btn-apropos" class="btn btn-primary" onclick="toggleAproposPopup()">À propos</button>
+						<a id="btn-transcriptions" class="btn-header-tool" href="transcriptions.html"><span class="header-tool-emoji" aria-hidden="true">&#127911;</span>Transcriptions</a>
+						<a id="btn-apropos" href="apropos.html" class="btn-header-tool"><span class="header-tool-emoji" aria-hidden="true">&#128269;</span>En savoir plus</a>
 					</div>
-					<ul class="center-menu align-items" 
-					id="fh5co-logo"><a href="">PREFAB<span>.FLE</span></a>		
-					</ul>
+				</nav>
 			</div>
 		</section>
 		<!-- #fh5co-header -->
 
-		<section id="fh5co-hero" class="no-js-fullheight" style="background-image: url(images/learn.png);" weight= 80%>
+		<section id="fh5co-hero" class="no-js-fullheight" style="background-image: url(images/learn.png);" weight=80%>
 			<div class="fh5co-overlay"></div>
 			<div class="container">
 				<div class="fh5co-intro no-js-fullheight">
-		<div class="fh5co-intro-text">
+					<div class="fh5co-intro-text">
 						<!-- 
 							INFO:
 							Change the class to 'fh5co-right-position' or 'fh5co-center-position' to change the layout position
@@ -71,402 +64,484 @@
 							<div class="fh5co-right-position">
 						-->
 						<!-- a modifier peut-être-->
-							<div style="width: 100%; display: flex; justify-content: center;">
-				<button style="width: 20%; margin-top: 540px;" class="btn btn-primary" onclick="document.getElementById('videointro').scrollIntoView({ behavior: 'smooth' })">S'entraîner</button>
+						<div style="width: 100%; display: flex; justify-content: center;">
+							<button style="width: 20%; margin-top: 540px;" class="btn btn-primary"
+								onclick="document.getElementById('videointro').scrollIntoView({ behavior: 'smooth' })">S'entraîner</button>
+						</div>
+					</div>
 				</div>
-            	</div>
+			</div>
+	</div>
+	</section>
+
+	<!-- Contenu principal -->
+	<div id="fh5co-projects">
+		<div
+			style="margin: 20px 0; border-bottom: 2px solid #FA5555; padding-bottom: 10px; display: flex; justify-content: space-between; align-items: center;">
+			<h2>🔴 Sensibilisation aux PPI</h2>
+		</div>
+
+		<!-- Vidéo intro -->
+		<div id="videointro" class="video-container">
+			<div>
+				<video src="video/introduction.mp4" controls poster="images/cover.png"
+					style="width: 100%; height: 450px; border-radius: 20px;"></video>
+			</div>
+		</div>
+
+		<!-- Boutons -->
+		<div style="display: flex; justify-content: center; gap: 20px; margin-top: 20px;">
+			<button class="btn btn-primary" onclick="window.location.href='#transcription'">Lire les
+				transcriptions</button>
+			<button class="btn btn-primary" onclick="window.location.href='#activite1'">Lancer les activités</button>
+		</div>
+	</div>
+
+	<!-- Transcription -->
+	<div id="fh5co-about" style="margin-top: 0;">
+		<div class="text-left">
+			<div
+				style="margin: 20px 0; border-bottom: 2px solid #FA5555; padding-bottom: 10px; display: flex; justify-content: space-between; align-items: center;">
+				<h2>🔴 <span id="transcription" style="color:#FA5555">Transcriptions</span></h2>
+			</div>
+		</div>
+		<div class="video-container">
+			<div class="video-wrapper">
+				<iframe src="https://ladigitale.dev/digiquiz/q/683d88ef5e31c" style="width: 100%; height: 450px;"
+					frameborder="0" allowfullscreen scrolling="no"></iframe>
+			</div>
+		</div>
+		<div style="display: flex; justify-content: center; margin-top: 20px;">
+			<button class="btn btn-primary" onclick="window.location.href='#activite1'">Lancer les activités</button>
+		</div>
+	</div>
+	</div>
+
+	<section id="fh5co-about">
+		<div
+			style="margin: 20px 0; border-bottom: 2px solid #FA5555; padding-bottom: 10px; display: flex; justify-content: space-between; align-items: center;">
+			<h3>🔴 Activités pour mieux comprendre les phrases toutes faites</h3>
+			<button class="btn btn-primary" onclick="toggleGlossary()">Glossaire</button>
+		</div>
+
+		<!-- Activité 1 -->
+		<section>
+			<div class="video-container" style="margin-bottom: 40px;">
+				<div class="video-wrapper">
+					<h4 style="margin-top:16px; margin-bottom:12px;">⭕ <span id="activite1"
+							style="color:#FA5555;">1.</span> Ça va ? Des amis arrivent pour une soirée. </h4>
+					<div style="margin-left: 32px;">
+						<audio src="audio/amies.mp3" controls class="img-fluid"
+							style="width: 80%; border-radius: 16px; margin-bottom: 16px;"></audio>
+						<p style="margin-bottom: 16px;">Cet extrait est issu du corpus CLAPI. Relevé le 20 mai 2025, à
+							l’adresse http://clapi.icar.cnrs.fr/</p>
+					</div>
+					<iframe src="https://ladigitale.dev/digiquiz/q/6843f5ac7f00b" style="width: 100%; height: 350px;"
+						frameborder="0" allowfullscreen></iframe>
+					<!-- Bouton explicatif -->
+					<div style="margin-top: 16px;">
+						<button class="btn" style="background:#FA5555; color:#fff; border:none;"
+							onclick="document.getElementById('explication-cava').style.display='flex'">🗣️
+							Explication</button>
+					</div>
+					<!-- Pop-up explicative -->
+					<div id="explication-cava"
+						style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.6); z-index:9999; justify-content:center; align-items:center;">
+						<div
+							style="background:#fff; color:#222; max-width:420px; width:90vw; max-height:90vh; overflow:auto; border-radius:16px; padding:32px; position:relative; box-shadow:0 8px 32px rgba(0,0,0,0.2);">
+							<button onclick="document.getElementById('explication-cava').style.display='none'"
+								style="position:absolute; top:12px; right:16px; font-size:2rem; background:none; border:none; color:#FA5555; cursor:pointer;">&times;</button>
+							<div style="white-space: pre-line;">
+								🗣️ <strong>Explication</strong>
+								Vous avez observé dans l'extrait qu'en français, quand on pose la question <i>Ça va
+									?</i>, on n'attend pas une réponse longue. Ce n'est pas une vraie question sur la
+								santé ou l'état physique.
+								👉 La réponse est généralement courte, comme :
+								<i>Oui, ça va et toi ?</i> <i>Super et toi?</i>
+								Il faut toujours retourner la question. Par exemple :
+								<i>Oui, et toi ?</i>
+								Pour répondre à la question, on peut aussi utiliser d'autres formules chaleureuses,
+								comme :
+								<i>Ça fait longtemps !</i>
+								❌ Dire seulement <i>oui</i>, sans demander des nouvelles de l'autre, peut sembler froid
+								ou malpoli.
+							</div>
+						</div>
+					</div>
+		</section>
+
+		<!-- Activité 2 -->
+		<section>
+			<div class="video-container" style="margin-bottom: 40px;">
+				<div class="video-wrapper">
+					<h4 style="margin-top:16px; margin-bottom:12px;">⭕ <span style="color:#FA5555;">2.</span> Lisez
+						l'extrait et choisissez les bonnes formules :</h4>
+					<iframe src="https://ladigitale.dev/digiquiz/q/6835d9f82b670" style="width: 100%; height: 515px;"
+						frameborder="0" allowfullscreen></iframe>
+					<div style="margin-left: 32px;">
+						<p style="margin-bottom: 16px;">Cet extrait est issu du corpus MPF. Relevé le 22 mai 2025, à
+							l’adresse https://mpfvitrine.modyco.fr</p>
+						<!-- Bouton explicatif -->
+						<div style="margin-top: 16px;">
+							<button class="btn" style="background:#FA5555; color:#fff; border:none;"
+								onclick="document.getElementById('explication-gros').style.display='flex'">🌟 Curiosités
+								du français parlé</button>
+						</div>
+						<!-- Pop-up explicative -->
+						<div id="explication-gros"
+							style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.6); z-index:9999; justify-content:center; align-items:center;">
+							<div
+								style="background:#fff; color:#222; max-width:420px; width:90vw; max-height:90vh; overflow:auto; border-radius:16px; padding:32px; position:relative; box-shadow:0 8px 32px rgba(0,0,0,0.2);">
+								<button onclick="document.getElementById('explication-gros').style.display='none'"
+									style="position:absolute; top:12px; right:16px; font-size:2rem; background:none; border:none; color:#FA5555; cursor:pointer;">&times;</button>
+								<div style="white-space: pre-line;">
+									<strong> Le français parlé : quelques particularités</strong>
+									🔹 1. Les atténuants : <i>un petit</i>
+									👉 En français, on dit souvent "un petit..." pour rendre la phrase plus douce, polie
+									et conviviale. Cela ne veut pas dire que c’est vraiment <i>"petit"</i>.
+									🔸 Exemples :
+									<i>Tu veux un petit café ?</i>
+									<i>Tu peux me rendre un petit service ?</i>
+									🔹 2. Les connecteurs de l’oral : <i>en gros</i>, <i>du coup</i>
+									Attention : à éviter dans des contextes plus formels.
+									En gros = pour résumer, dire l’essentiel
+									Exemple : <i>En gros, il a quitté son travail pour voyager.</i>
+									Du coup = parfois utilisé pour exprimer une conséquence.
+									Exemple : <i>Il pleuvait, du coup on est restés à la maison.</i>
+									🔹 3. Pour terminer : <i>C’est tout</i>, <i>voilà</i>
+									C’est tout = pour dire que l’on a fini de parler (comme dans l'extrait).
+									Voilà = un mot très courant pour terminer ou résumer.
+									Exemple : Voilà, c’est ce que je voulais dire.
+									✅ On peut aussi dire <i>voilà</i> au début, au milieu ou à la fin d’une phrase.
+								</div>
+							</div>
+						</div>
+		</section>
+
+		<section>
+			<!-- Activité 3 -->
+			<div class="video-container" style="margin-bottom: 40px;">
+				<div class="video-wrapper">
+					<h4 style="margin-top:16px; margin-bottom:12px;">⭕ <span id="activite3"
+							style="color:#FA5555;">3.</span> Ça me saoule ! Observez cette discussion entre amis, ils
+						parlent d'une émission télé.</h4>
+					<div style="margin-left: 32px;">
+						<audio src="audio/saoule.wav" controls class="img-fluid"
+							style="width: 80%; border-radius: 16px; margin-bottom: 16px;"></audio>
+						<p style="margin-bottom: 16px;">Cet extrait est issu du corpus TCOF. Relevé le 26 mai 2025, à
+							l’adresse https://tcof.atilf.fr/</p>
+					</div>
+					<iframe src="https://ladigitale.dev/digiquiz/q/683ef359e62f7" style="width: 100%; height: 330px;"
+						frameborder="0" allowfullscreen></iframe>
+					<!-- Bouton explicatif -->
+					<div style="margin-top: 16px;">
+						<button class="btn" style="background:#FA5555; color:#fff; border:none;"
+							onclick="document.getElementById('explication-saoule').style.display='flex'">🗣️
+							Explication</button>
+					</div>
+					<!-- Pop-up explicative -->
+					<div id="explication-saoule"
+						style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.6); z-index:9999; justify-content:center; align-items:center;">
+						<div
+							style="background:#fff; color:#222; max-width:420px; width:90vw; max-height:90vh; overflow:auto; border-radius:16px; padding:32px; position:relative; box-shadow:0 8px 32px rgba(0,0,0,0.2);">
+							<button onclick="document.getElementById('explication-saoule').style.display='none'"
+								style="position:absolute; top:12px; right:16px; font-size:2rem; background:none; border:none; color:#FA5555; cursor:pointer;">&times;</button>
+							<div style="white-space: pre-line;">
+								🗣️ <strong>Explication</strong>
+								Dans la vidéo d'introduction, nous avons aussi vu l'expression <i>ça me saoule</i>,
+								employée au passé <i>ça m'a saoulé</i> utilisée dans une conversation entre amies.
+								Dans cet autre contexte, le sens est le même :
+								👉 <i>j’en ai marre</i>, ou <i>ça me fatigue</i>.
+								Mais parfois, on entend : <i>ça me saoule au bout d’un moment</i>.
+								👉 Cette petite phrase ajoute une nuance.
+								🧠 <strong>Quelle nuance ?</strong>
+								Cela veut dire que la personne n'est pas énervée tout de suite, mais au bout d'un
+								certain temps.
+								Elle supporte un moment, mais à force, elle en a marre. On parle donc d'un agacement
+								progressif.
+							</div>
+						</div>
+					</div>
+					<!-- Bouton transcription -->
+					<div style="margin-top: 16px;">
+						<button class="btn" style="background:#FA5555; color:#fff; border:none;"
+							onclick="document.getElementById('transcription-saoule').style.display='flex'">📃
+							Transcription</button>
+					</div>
+					<!-- Pop-up transcription activité 3-->
+					<div id="transcription-saoule"
+						style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.6); z-index:9999; justify-content:center; align-items:center;">
+						<div
+							style="background:#fff; color:#222; max-width:420px; width:90vw; max-height:90vh; overflow:auto; border-radius:16px; padding:32px; position:relative; box-shadow:0 8px 32px rgba(0,0,0,0.2);">
+							<button onclick="document.getElementById('transcription-saoule').style.display='none'"
+								style="position:absolute; top:24px; right:16px; font-size:2rem; background:none; border:none; color:#FA5555; cursor:pointer;">&times;</button>
+							<div style="white-space: pre-line;">
+								<div style="white-space: pre-line;">
+									<audio src="audio/saoule.wav" controls class="img-fluid"
+										style="width: 80%; border-radius: 16px; margin-bottom: 16px;"></audio>
+									<strong>Transcription</strong>
+									Véronique : je sais pas. Je suis pas... Je suis pas fane de l'émission là.
+									Clarisse : oh j' aime bien.
+									Véronique : c' est beau, mais euh...
+									Clarisse : oh ouais c' est chouette. Moi, j'aime bien.
+									Véronique : ça me saoule au bout d'un moment.
+									Clarisse : ah bon ?
+									Louis : oh non oh.
+								</div>
+							</div>
+		</section>
+
+		<!-- Activité 4 -->
+		<section>
+			<div class="text-left">
+			</div>
+			<div class="video-container" style="margin-bottom: 40px;">
+				<div class="video-wrapper">
+					<h4 style="margin-top:16px; margin-bottom:12px;">⭕ <span style="color:#FA5555;">4.</span> Regardez
+						l'extrait vidéo et répondez à la question :</h4>
+					<iframe src="https://ladigitale.dev/digiquiz/q/683ef052da9ab" style="width: 100%; height: 500px;"
+						frameborder="0" allowfullscreen></iframe>
+					<div style="margin-left: 32px;">
+						<p style="margin-bottom: 16px;">Cet extrait est issu du corpus CLAPI. Relevé le 20 mai 2025, à
+							l’adresse http://clapi.icar.cnrs.fr/</p>
+						<!-- Bouton explicatif -->
+						<div style="margin-top: 16px;">
+							<button class="btn" style="background:#FA5555; color:#fff; border:none;"
+								onclick="document.getElementById('explication-raconte').style.display='flex'">🗣️
+								Explication</button>
+						</div>
+						<!-- Pop-up explicative -->
+						<div id="explication-raconte"
+							style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.6); z-index:9999; justify-content:center; align-items:center;">
+							<div
+								style="background:#fff; color:#222; max-width:420px; width:90vw; max-height:90vh; overflow:auto; border-radius:16px; padding:32px; position:relative; box-shadow:0 8px 32px rgba(0,0,0,0.2);">
+								<button onclick="document.getElementById('explication-raconte').style.display='none'"
+									style="position:absolute; top:12px; right:16px; font-size:2rem; background:none; border:none; color:#FA5555; cursor:pointer;">&times;</button>
+								<div style="white-space: pre-line;">
+									🗣️ <strong>Explication</strong>
+									🔹 <i>Je te raconte pas</i>
+									→ C’est une expression familière et elliptique (on ne finit pas la phrase). Elle
+									sert à accentuer qu’une situation était très forte, pénible, absurde, incroyable ou
+									drôle, sans entrer dans les détails. Effet : surprise ou humour.
+									🔹 <i>Ça commence bien</i>
+									→ Cette expression est souvent utilisée de manière ironique pour signaler que
+									quelque chose débute mal ou annonce la suite d’une galère. Effet : exaspération ou
+									humour.
+									🔸 Note : <i>Calée dans le logiciel</i> peut avoir deux sens
+									Bloquée, figée (ça ne marche plus) ou compétente, qui maîtrise bien (familier).
+									Dans l'extrait vidéo, les formules et les expressions faciales de la femme indiquent
+									de l'ironie.
+								</div>
+							</div>
+						</div>
+		</section>
+
+		<!-- Activité 5 -->
+		<div class="text-left">
+		</div>
+		<div class="video-container" style="margin-bottom: 40px;">
+			<div class="video-wrapper">
+				<h4 style="margin-top:16px; margin-bottom:12px;">⭕ <span id="activite2" style="color:#FA5555;">5.</span>
+					Tu rigoles ? Un couple invite un ami à déjeuner </h4>
+				<div style="margin-left: 32px;">
+					<audio src="audio/rigole.mp3" controls class="img-fluid"
+						style="width: 80%; border-radius: 16px; margin-bottom: 16px;"></audio>
+					<p style="margin-bottom: 16px;">Cet extrait est issu du corpus Eslo. Relevé le 23 mai 2025, à
+						l’adresse http://eslo.huma-num.fr/CorpusEslo/html/Corpus/index/</p>
 				</div>
+				<iframe src="https://ladigitale.dev/digiquiz/q/6835a8a8b999d" style="width: 100%; height: 325px;"
+					frameborder="0" allowfullscreen></iframe>
+				<!-- Bouton transcription pour activité 5 -->
+				<div style="margin-top: 16px;">
+					<button class="btn" style="background:#FA5555; color:#fff; border:none;"
+						onclick="document.getElementById('transcription-rigole').style.display='flex'">📃
+						Transcription</button>
+				</div>
+				<!-- Pop-up transcription activité 5 -->
+				<div id="transcription-rigole"
+					style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.6); z-index:9999; justify-content:center; align-items:center;">
+					<div
+						style="background:#fff; color:#222; max-width:420px; width:90vw; max-height:90vh; overflow:auto; border-radius:16px; padding:32px; position:relative; box-shadow:0 8px 32px rgba(0,0,0,0.2);">
+						<button onclick="document.getElementById('transcription-rigole').style.display='none'"
+							style="position:absolute; top:12px; right:16px; font-size:2rem; background:none; border:none; color:#FA5555; cursor:pointer;">&times;</button>
+						<div style="white-space: pre-line;">
+							<audio src="audio/rigole.mp3" controls class="img-fluid"
+								style="width: 80%; border-radius: 16px; margin-bottom: 16px;"></audio>
+							<strong>Transcription</strong>
+							Invité : bon, bah, merci. C'était.. merci beaucoup.
+							Elodie : Mais non, mais toi, tu manges, hein.
+							Invité : Ah non.
+							Elodie : Ah tu rigoles, on avait dit ça eh on t'a attendu, hein
+							Claude : Tu manges, au moins tu manges avec nous.
+							Invité : Bon, bah, écoute, c'est vachement sympa.
+							[Les extraits présentés ici sont anonymisés ; les prénoms utilisés sont fictifs.]
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Activité 6 -->
+		<section>
+			<div class="video-container" style="margin-bottom: 40px;">
+				<div class="video-wrapper">
+					<h4 style="margin-top:16px; margin-bottom:12px;">⭕ <span id="activite6"
+							style="color:#FA5555;">6.</span> Apéro entre amies</h4>
+					<iframe src="https://ladigitale.dev/digiquiz/q/683d5f24159b6" allow="fullscreen; autoplay;"
+						frameborder="0" style="width: 100%; height: 440px; overflow: hidden;"></iframe>
+					<div style="margin-left: 32px;">
+						<audio src="audio/sens_saoule.wav" controls class="img-fluid"
+							style="width: 80%; border-radius: 16px; margin-bottom: 16px;"></audio>
+						<p style="margin-bottom: 16px;">Cet extrait est issu du corpus CLAPI. Relevé le 20 mai 2025, à
+							l’adresse http://clapi.icar.cnrs.fr/</p>
+					</div>
 				</div>
 			</div>
 		</section>
 
-   <!-- Contenu principal -->
-<div id="fh5co-projects">
-  <div style="margin: 20px 0; border-bottom: 2px solid #FA5555; padding-bottom: 10px; display: flex; justify-content: space-between; align-items: center;">
-    <h2>🔴 Sensibilisation aux PPI</h2>
-  </div>
+		<!-- Glossaire modal amélioré -->
+		<div id="glossary">
+			<button class="close-btn" onclick="toggleGlossary()">×</button>
+			<h3>Glossaire</h3>
+			<input type="text" id="glossary-search" placeholder="Rechercher..." onkeyup="filterGlossary()"
+				style="width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 4px;">
+			<ul id="glossary-list">
+				<li><strong>A plus ; A+</strong> : manière courte et familière pour dire « à plus tard ». Langage texto
+					; contexte familier.</li>
+				<li><strong>A toute</strong> : expression familière pour dire « à bientôt ». Contexte familier.</li>
+				<li><strong>Ça fait longtemps</strong> : pour saluer quelqu’un qu’on n’a pas vu depuis longtemps. PPI de
+					Politesse.</li>
+				<li><strong>Ça marche</strong> : cela veut dire « c’est bon » ou « ça va ». PPI d’acceptation ou
+					confirmation.</li>
+				<li><strong>C'est bon</strong> : cela peut signifier « je me régale » ; « il ne faut pas abuser » ou
+					bien « ça marche maintenant. » Pour dire que c’est bien, suffisant ou que cela fonctionne. PPI de
+					satisfaction, confirmation ou voire refus.</li>
+				<li><strong>C'est gentil</strong> : pour remercier quelqu’un. PPI de politesse.</li>
+				<li><strong>Comme tu le sens</strong> : pour dire à quelqu’un qu’il peut choisir ou faire comme il
+					préfère. Donner le choix, être gentil.</li>
+				<li><strong>Comment dirais-je ?</strong> : pour réfléchir avant de parler. Indique l’hésitation.</li>
+				<li><strong>Il (ne) fallait pas</strong> : quand ce n’était pas nécessaire de faire quelque chose (après
+					un cadeau). PPI de politesse.</li>
+				<li><strong>Je te raconte pas</strong> : pour dire que c’est difficile ou impressionnant. Contexte
+					familier.</li>
+				<li><strong>N'hésitez pas</strong> : pour inviter à poser des questions ou demander. Contexte
+					d'apprentissage, de formation ou de communication professionnelle ou touristique.</li>
+				<li><strong>On a vu mieux</strong> : pour dire que quelqu’un ne va pas bien ou que c’est une mauvaise
+					situation.</li>
+				<li><strong>On ne va pas se mentir</strong> : pour dire une vérité souvent un peu dure.</li>
+				<li><strong>Pas de souci</strong> : Souvent dans le même sens que « pas de problème ». PPI pour rassurer
+					ou remercier.</li>
+				<li><strong>Pas de quoi</strong> : Répondre à un merci, « de rien ». PPI de politesse.</li>
+				<li><strong>Vous de même</strong> : Souhaiter la même chose en retour. PPI de politesse.</li>
+				<li><strong>Ça me saoule</strong> : (aussi écrit ça me soule ou ça me saoûle). Pour dire que quelque
+					chose agace, énerve ou fatigue mentale ; contexte familier.</li>
+			</ul>
+		</div>
 
-  <!-- Vidéo intro -->
-  <div id="videointro" class="video-container">
-    <div class="video-wrapper">
-      <div class="video-cover" onclick="playVideo()">
-        <img src="images/cover.png" alt="Video Cover" style="width: 100%; height: auto; cursor: pointer;">
-      </div>
-    </div>
-  </div>
+		<!-- Zone modale pour la transcription -->
+		<div id="transcription-modal"
+			style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.7); z-index:9999; justify-content:center; align-items:center;">
+			<div
+				style="background:#fff; max-width:900px; width:90vw; max-height:90vh; overflow:auto; border-radius:12px; padding:32px; position:relative;">
+				<button onclick="closeTranscription()"
+					style="position:absolute; top:12px; right:16px; font-size:2rem; background:none; border:none; cursor:pointer;">&times;</button>
+				<div id="transcription-content">Chargement...</div>
+			</div>
+		</div>
 
-  <!-- Boutons -->
-  <div style="display: flex; justify-content: center; gap: 20px; margin-top: 20px;">
-    <button class="btn btn-primary" onclick="window.location.href='#transcription'">Lire les transcriptions</button>
-	    <button class="btn btn-primary" onclick="window.location.href='#activite1'">Lancer les activités</button>
-  </div>
-</div>
+		<script>
 
- <!-- Transcription -->
-<div id="fh5co-about" style="margin-top: 0;">
-  <div class="text-left">
-	      <div style="margin: 20px 0; border-bottom: 2px solid #FA5555; padding-bottom: 10px; display: flex; justify-content: space-between; align-items: center;">
-    <h2>🔴 <span id="transcription" style="color:#FA5555">Transcriptions</span></h2>
-  </div>
-  </div>
-  <div class="video-container">
-    <div class="video-wrapper">
-      <iframe src="https://ladigitale.dev/digiquiz/q/683d88ef5e31c" style="width: 100%; height: 450px;" frameborder="0" allowfullscreen scrolling="no"></iframe>
-	</div>
-  </div>
-  <div style="display: flex; justify-content: center; margin-top: 20px;">
-  <button class="btn btn-primary" onclick="window.location.href='#activite1'">Lancer les activités</button>
-</div>
-</div>
-</div>
-
- <section id="fh5co-about">
-      <div style="margin: 20px 0; border-bottom: 2px solid #FA5555; padding-bottom: 10px; display: flex; justify-content: space-between; align-items: center;">
-        <h3>🔴 Activités pour mieux comprendre les phrases toutes faites</h3>
-        <button class="btn btn-primary" onclick="toggleGlossary()">Glossaire</button>
-</div>
-
-<!-- Activité 1 -->
- <section>
-<div class="video-container" style="margin-bottom: 40px;">
-  <div class="video-wrapper">
-    <h4 style="margin-top:16px; margin-bottom:12px;">⭕ <span id="activite1" style="color:#FA5555;">1.</span> Ça va ? Des amis arrivent pour une soirée </h4>
-    <div style="margin-left: 32px;">
-      <audio src="audio/amies.mp3" controls class="img-fluid" style="width: 80%; border-radius: 16px; margin-bottom: 16px;"></audio>
-      <p style="margin-bottom: 16px;">Cet extrait est issu du corpus CLAPI. Relevé le 20 mai 2025, à l’adresse http://clapi.icar.cnrs.fr/</p>
-    </div>
-    <iframe src="https://ladigitale.dev/digiquiz/q/683093f762157" style="width: 100%; height: 350px;" frameborder="0" allowfullscreen></iframe>
-<!-- Bouton explicatif -->
-<div style="margin-top: 16px;">
-  <button class="btn" style="background:#FA5555; color:#fff; border:none;" onclick="document.getElementById('explication-cava').style.display='flex'">🗣️ Explication</button>
-</div>
-<!-- Pop-up explicative -->
-<div id="explication-cava" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.6); z-index:9999; justify-content:center; align-items:center;">
-  <div style="background:#fff; color:#222; max-width:420px; width:90vw; max-height:90vh; overflow:auto; border-radius:16px; padding:32px; position:relative; box-shadow:0 8px 32px rgba(0,0,0,0.2);">
-    <button onclick="document.getElementById('explication-cava').style.display='none'" style="position:absolute; top:12px; right:16px; font-size:2rem; background:none; border:none; color:#FA5555; cursor:pointer;">&times;</button>
-    <div style="white-space: pre-line;">
-🗣️ <strong>Explication</strong>
-Vous avez observé dans l'extrait qu'en français, quand on pose la question <i>Ça va ?</i>, on n'attend pas une réponse longue. Ce n'est pas une vraie question sur la santé ou l'état physique.
-👉 La réponse est généralement courte, comme :
-<i>Oui, ça va et toi ?</i> <i>Super et toi?</i>
-Il faut toujours retourner la question. Par exemple :
-<i>Oui, et toi ?</i>
-Pour répondre à la question, on peut aussi utiliser d'autres formules chaleureuses, comme : 
-<i>Ça fait longtemps !</i>
-❌ Dire seulement <i>oui</i>, sans demander des nouvelles de l'autre, peut sembler froid ou malpoli.
-    </div>
-  </div>
-</div>
-</section>  
-
-<!-- Activité 2 -->
- <section>
-<div class="video-container" style="margin-bottom: 40px;">
-    <div class="video-wrapper">
-      <h4 style="margin-top:16px; margin-bottom:12px;">⭕ <span style="color:#FA5555;">2.</span> Lisez l'extrait et choisissez les bonnes formules :</h4>
-      <iframe src="https://ladigitale.dev/digiquiz/q/6835d9f82b670" style="width: 100%; height: 515px;" frameborder="0" allowfullscreen></iframe>
-      <div style="margin-left: 32px;">
-        <p style="margin-bottom: 16px;">Cet extrait est issu du corpus MPF. Relevé le 22 mai 2025, à l’adresse https://mpfvitrine.modyco.fr</p>
- 	   <!-- Bouton explicatif -->
-<div style="margin-top: 16px;">
-  <button class="btn" style="background:#FA5555; color:#fff; border:none;" onclick="document.getElementById('explication-gros').style.display='flex'">🌟 Curiosités du français parlé</button>
-</div>
-<!-- Pop-up explicative -->
-<div id="explication-gros" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.6); z-index:9999; justify-content:center; align-items:center;">
-  <div style="background:#fff; color:#222; max-width:420px; width:90vw; max-height:90vh; overflow:auto; border-radius:16px; padding:32px; position:relative; box-shadow:0 8px 32px rgba(0,0,0,0.2);">
-    <button onclick="document.getElementById('explication-gros').style.display='none'" style="position:absolute; top:12px; right:16px; font-size:2rem; background:none; border:none; color:#FA5555; cursor:pointer;">&times;</button>
-          <div style="white-space: pre-line;">
-<strong> Le français parlé : quelques particularités</strong>
-🔹 1. Les atténuants : <i>un petit</i>
-👉 En français, on dit souvent "un petit..." pour rendre la phrase plus douce, polie et conviviale. Cela ne veut pas dire que c’est vraiment <i>"petit"</i>.
-🔸 Exemples : 
-<i>Tu veux un petit café ?</i> 
-<i>Tu peux me rendre un petit service ?</i>
-🔹 2. Les connecteurs de l’oral : <i>en gros</i>, <i>du coup</i> 
-Attention : à éviter dans des contextes plus formels. 
-En gros = pour résumer, dire l’essentiel
-Exemple : <i>En gros, il a quitté son travail pour voyager.</i>
-Du coup = parfois utilisé pour dire une conséquence
-Exemple : <i>Il pleuvait, du coup on est restés à la maison.</i>
-🔹 3. Pour terminer : <i>C’est tout</i>, <i>voilà</i>
-C’est tout = pour dire que l’on a fini de parler (comme dans l'extrait).
-Voilà = un mot très courant pour terminer ou résumer.
-Exemple : Voilà, c’est ce que je voulais dire.
-✅ On peut aussi dire <i>voilà</i> au début, au milieu ou à la fin d’une phrase.
-	</div>
-  </div>
-</div>
-</section>
-
-<section>
-<!-- Activité 3 -->
-<div class="video-container" style="margin-bottom: 40px;">
-  <div class="video-wrapper">
-    <h4 style="margin-top:16px; margin-bottom:12px;">⭕ <span id="activite3" style="color:#FA5555;">3.</span> Ça me saoule ! Observez cette discussion entre amis, ils parlent d'une émission télé.</h4>
-    <div style="margin-left: 32px;">
-      <audio src="audio/saoule.wav" controls class="img-fluid" style="width: 80%; border-radius: 16px; margin-bottom: 16px;"></audio>
-      <p style="margin-bottom: 16px;">Cet extrait est issu du corpus TCOF. Relevé le 26 mai 2025, à l’adresse https://tcof.atilf.fr/</p>
-    </div>
-    <iframe src="https://ladigitale.dev/digiquiz/q/683ef359e62f7" style="width: 100%; height: 330px;" frameborder="0" allowfullscreen></iframe>
- <!-- Bouton explicatif -->
-<div style="margin-top: 16px;">
-  <button class="btn" style="background:#FA5555; color:#fff; border:none;" onclick="document.getElementById('explication-saoule').style.display='flex'">🗣️ Explication</button>
-</div>
-<!-- Pop-up explicative -->
-<div id="explication-saoule" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.6); z-index:9999; justify-content:center; align-items:center;">
-  <div style="background:#fff; color:#222; max-width:420px; width:90vw; max-height:90vh; overflow:auto; border-radius:16px; padding:32px; position:relative; box-shadow:0 8px 32px rgba(0,0,0,0.2);">
-    <button onclick="document.getElementById('explication-saoule').style.display='none'" style="position:absolute; top:12px; right:16px; font-size:2rem; background:none; border:none; color:#FA5555; cursor:pointer;">&times;</button>
-    <div style="white-space: pre-line;">
-🗣️ <strong>Explication</strong>
-Dans la vidéo d'introduction, nous avons aussi vu l'expression <i>ça me saoule</i>, employée au passé <i>ça m'a saoulé</i> utilisée dans une conversation entre amies.
-Dans cet autre contexte, le sens est le même :
-👉 <i>j’en ai marre</i>, ou <i>ça me fatigue</i>.
-Mais parfois, on entend : <i>ça me saoule au bout d’un moment</i>.
-👉 Cette petite phrase ajoute une nuance.
-🧠 <strong>Quelle nuance ?</strong>
-Cela veut dire que la personne n'est pas énervée tout de suite, mais au bout d'un certain temps.
-Elle supporte un moment, mais à force, elle en a marre. On parle donc d'un agacement progressif.
-</div>
-    </div>
-</div>
-	<!-- Bouton transcription -->
-<div style="margin-top: 16px;">
-  <button class="btn" style="background:#FA5555; color:#fff; border:none;" onclick="document.getElementById('transcription-saoule').style.display='flex'">📃 Transcription</button>
-</div>
-<!-- Pop-up transcription activité 3-->
-<div id="transcription-saoule" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.6); z-index:9999; justify-content:center; align-items:center;">
-  <div style="background:#fff; color:#222; max-width:420px; width:90vw; max-height:90vh; overflow:auto; border-radius:16px; padding:32px; position:relative; box-shadow:0 8px 32px rgba(0,0,0,0.2);">
-    <button onclick="document.getElementById('transcription-saoule').style.display='none'" style="position:absolute; top:24px; right:16px; font-size:2rem; background:none; border:none; color:#FA5555; cursor:pointer;">&times;</button>
-    <div style="white-space: pre-line;">
-<div style="white-space: pre-line;">
-<audio src="audio/saoule.wav" controls class="img-fluid" style="width: 80%; border-radius: 16px; margin-bottom: 16px;"></audio>
-<strong>Transcription</strong>
-Véronique : je sais pas. Je suis pas... Je suis pas fane de l'émission là.
-Clarisse : oh j' aime bien.
-Véronique : c' est beau, mais euh...
-Clarisse : oh ouais c' est chouette. Moi, j'aime bien.
-Véronique : ça me saoule au bout d'un moment.
-Clarisse : ah bon ? 
-Louis : oh non oh.
-  </div>
-</div>
-</section>
-
-<!-- Activité 4 -->
-<section>  
-<div class="text-left">
-  </div>
-  <div class="video-container" style="margin-bottom: 40px;">
-    <div class="video-wrapper">
-       <h4 style="margin-top:16px; margin-bottom:12px;">⭕ <span style="color:#FA5555;">4.</span> Regardez l'extrait vidéo et répondez à la question :</h4>
-      <iframe src="https://ladigitale.dev/digiquiz/q/683ef052da9ab" style="width: 100%; height: 500px;" frameborder="0" allowfullscreen></iframe>
-	  <div style="margin-left: 32px;">
-	  <p style="margin-bottom: 16px;">Cet extrait est issu du corpus CLAPI. Relevé le 20 mai 2025, à l’adresse http://clapi.icar.cnrs.fr/</p>
-	   <!-- Bouton explicatif -->
-<div style="margin-top: 16px;">
-  <button class="btn" style="background:#FA5555; color:#fff; border:none;" onclick="document.getElementById('explication-raconte').style.display='flex'">🗣️ Explication</button>
-</div>
-<!-- Pop-up explicative -->
-<div id="explication-raconte" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.6); z-index:9999; justify-content:center; align-items:center;">
-  <div style="background:#fff; color:#222; max-width:420px; width:90vw; max-height:90vh; overflow:auto; border-radius:16px; padding:32px; position:relative; box-shadow:0 8px 32px rgba(0,0,0,0.2);">
-    <button onclick="document.getElementById('explication-raconte').style.display='none'" style="position:absolute; top:12px; right:16px; font-size:2rem; background:none; border:none; color:#FA5555; cursor:pointer;">&times;</button>
-          <div style="white-space: pre-line;">
-🗣️ <strong>Explication</strong>
-🔹 <i>Je te raconte pas</i>
-→ C’est une expression familière et elliptique (on ne finit pas la phrase). Elle sert à accentuer qu’une situation était très forte, pénible, absurde, incroyable ou drôle, sans entrer dans les détails. Effet : surprise ou humour.
-🔹 <i>Ça commence bien</i>
-→ Cette expression est souvent utilisée de manière ironique pour signaler que quelque chose débute mal ou annonce la suite d’une galère. Effet : exaspération ou humour.
-🔸  Note : <i>Calée dans le logiciel</i> peut avoir deux sens
-Bloquée, figée (ça ne marche plus) ou compétente, qui maîtrise bien (familier).
-Dans l'extrait vidéo, les formules et les expressions faciales de la femme indiquent de l'ironie.
-	</div>
-  </div>
-</div>
-</section>
-
-<!-- Activité 5 -->
-  <div class="text-left">
-  </div>
-  <div class="video-container" style="margin-bottom: 40px;">
-    <div class="video-wrapper">
-    <h4 style="margin-top:16px; margin-bottom:12px;">⭕ <span id="activite2" style="color:#FA5555;">5.</span> Tu rigoles ? Un couple invite un ami à déjeuner </h4>
-    <div style="margin-left: 32px;">
-      <audio src="audio/rigole.mp3" controls class="img-fluid" style="width: 80%; border-radius: 16px; margin-bottom: 16px;"></audio>
-      <p style="margin-bottom: 16px;">Cet extrait est issu du corpus Eslo. Relevé le 23 mai 2025, à l’adresse http://eslo.huma-num.fr/CorpusEslo/html/Corpus/index/</p>
-    </div>
-  	<iframe src="https://ladigitale.dev/digiquiz/q/6835a8a8b999d" style="width: 100%; height: 325px;" frameborder="0" allowfullscreen></iframe>
-	<!-- Bouton transcription pour activité 5 -->
-<div style="margin-top: 16px;">
-  <button class="btn" style="background:#FA5555; color:#fff; border:none;" onclick="document.getElementById('transcription-rigole').style.display='flex'">📃 Transcription</button>
-</div>
-<!-- Pop-up transcription activité 5 -->
-<div id="transcription-rigole" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.6); z-index:9999; justify-content:center; align-items:center;">
-  <div style="background:#fff; color:#222; max-width:420px; width:90vw; max-height:90vh; overflow:auto; border-radius:16px; padding:32px; position:relative; box-shadow:0 8px 32px rgba(0,0,0,0.2);">
-    <button onclick="document.getElementById('transcription-rigole').style.display='none'" style="position:absolute; top:12px; right:16px; font-size:2rem; background:none; border:none; color:#FA5555; cursor:pointer;">&times;</button>
-    <div style="white-space: pre-line;">
-	<audio src="audio/rigole.mp3" controls class="img-fluid" style="width: 80%; border-radius: 16px; margin-bottom: 16px;"></audio>
-<strong>Transcription</strong>
-Invité : bon, bah, merci. C'était.. merci beaucoup.
-Elodie : Mais non, mais toi, tu manges, hein.
-Invité : Ah non.
-Elodie : Ah tu rigoles, on avait dit ça eh on t'a attendu, hein
-Claude : Tu manges, au moins tu manges avec nous.
-Invité : Bon, bah, écoute, c'est vachement sympa.
-[Les extraits présentés ici sont anonymisés ; les prénoms utilisés sont fictifs.]
-    </div>
-  </div>
-</div>
-	</div>
-  </div>
-
-<!-- Activité 6 -->
- <section>
- <div class="video-container" style="margin-bottom: 40px;">
-  <div class="video-wrapper">
-    <h4 style="margin-top:16px; margin-bottom:12px;">⭕ <span id="activite6" style="color:#FA5555;">6.</span> Apéro entre amies</h4>
-    <iframe src="https://ladigitale.dev/digiquiz/q/683d5f24159b6"  allow="fullscreen; autoplay;" frameborder="0" style="width: 100%; height: 440px; overflow: hidden;"></iframe>
-	<div style="margin-left: 32px;">
-      <audio src="audio/sens_saoule.wav" controls class="img-fluid" style="width: 80%; border-radius: 16px; margin-bottom: 16px;"></audio>
-    <p style="margin-bottom: 16px;">Cet extrait est issu du corpus CLAPI. Relevé le 20 mai 2025, à l’adresse http://clapi.icar.cnrs.fr/</p>
-    </div>
-  </div>
-</div>
- </section>
-
-<!-- Glossaire modal amélioré -->
-	<div id="glossary">
-		<button class="close-btn" onclick="toggleGlossary()">×</button>
-		<h3>Glossaire</h3>
-		<input type="text" id="glossary-search" placeholder="Rechercher..." onkeyup="filterGlossary()" style="width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 4px;">
-		<ul id="glossary-list">
-<li><strong>A plus ; A+</strong>: Manière courte et familière pour dire "à plus tard". Langage texto, informel.</li>
-<li><strong>A toute</strong>: Expression familière pour dire "à bientôt". Informel.</li>
-<li><strong>Ça fait longtemps !</strong>: Pour saluer quelqu’un qu’on n’a pas vu depuis longtemps. Politesse.</li>
-<li><strong>Ça marche.</strong>: Ça veut dire "c’est bon" ou "ça va". Accepter ou confirmer.</li>
-<li><strong>C'est bon</strong> (je me régale ; il ne faut pas abuser ; ça marche maintenant.) : Dire que c’est bien, suffisant ou que ça fonctionne. Satisfaction, confirmation.</li>
-<li><strong>C'est gentil</strong>: Pour remercier quelqu’un. Politesse.</li>
-<li><strong>Comme tu le sens</strong>: Dire à quelqu’un qu’il peut choisir ou faire comme il préfère. Donner le choix, être gentil.</li>
-<li><strong>Comment dirais-je ?</strong>: Pour réfléchir avant de parler. Hésitation.</li>
-<li><strong>Il fallait pas</strong>: Quand ce n’était pas nécessaire de faire quelque chose (après un cadeau). Politesse.</li>
-<li><strong>Je te raconte pas</strong>: Dire que c’est difficile ou impressionnant. Familière.</li>
-<li><strong>N'hésitez pas</strong>: Inviter à poser des questions ou demander. Formel.</li>
-<li><strong>On a vu mieux.</strong>: Dire que quelqu’un ne va pas bien ou que c’est une mauvaise situation.</li>
-<li><strong>On ne va pas se mentir</strong>: Dire une vérité souvent un peu dure.</li>
-<li><strong>Pas de souci</strong>: Souvent dans le même sens que "pas de problème". Rassurer ou remercier.</li>
-<li><strong>Pas de quoi.</strong>: Répondre à un merci, "de rien". Politesse.</li>
-<li><strong>Vous de même</strong>: Souhaiter la même chose en retour. Politesse.</li>
-<li><strong>Ça me saoule</strong> (aussi écrit "ça me soule") : Dire que quelque chose fatigue. Familière, agacement.</li>
-		</ul>
-	</div>
-
-	
-	<!-- Zone modale pour la transcription -->
-<div id="transcription-modal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.7); z-index:9999; justify-content:center; align-items:center;">
-  <div style="background:#fff; max-width:900px; width:90vw; max-height:90vh; overflow:auto; border-radius:12px; padding:32px; position:relative;">
-    <button onclick="closeTranscription()" style="position:absolute; top:12px; right:16px; font-size:2rem; background:none; border:none; cursor:pointer;">&times;</button>
-    <div id="transcription-content">Chargement...</div>
-  </div>
-</div>
-
-	<script>
-
-		function playVideo() {
+			function playVideo() {
 				const videoContainer = document.getElementById('videointro');
 				videoContainer.innerHTML = `
 					<div class="video-wrapper">
-						<iframe width="80%" height="400" src="video/introduction_v4.mp4" frameborder="0" allow="picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+						<iframe width="80%" height="400" src="video/introduction.mp4" frameborder="0" allow="picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 					</div>
 				`;
-				}
-
-		function toggleGlossary() {
-			const glossary = document.getElementById('glossary');
-			if (glossary.style.display === 'none' || glossary.style.display === '') {
-				glossary.style.display = 'block'; // Show the glossary
-			} else {
-				glossary.style.display = 'none'; // Hide the glossary
 			}
-		}
 
-		function filterGlossary() {
-			const searchInput = document.getElementById('glossary-search').value.toLowerCase();
-			const glossaryItems = document.querySelectorAll('#glossary-list li');
-
-			glossaryItems.forEach(item => {
-				const text = item.textContent.toLowerCase();
-				if (text.includes(searchInput)) {
-					item.style.display = ''; // Show item
+			function toggleGlossary() {
+				const glossary = document.getElementById('glossary');
+				if (glossary.style.display === 'none' || glossary.style.display === '') {
+					glossary.style.display = 'block'; // Show the glossary
 				} else {
-					item.style.display = 'none'; // Hide item
+					glossary.style.display = 'none'; // Hide the glossary
 				}
+			}
+
+			function filterGlossary() {
+				const searchInput = document.getElementById('glossary-search').value.toLowerCase();
+				const glossaryItems = document.querySelectorAll('#glossary-list li');
+
+				glossaryItems.forEach(item => {
+					const text = item.textContent.toLowerCase();
+					if (text.includes(searchInput)) {
+						item.style.display = ''; // Show item
+					} else {
+						item.style.display = 'none'; // Hide item
+					}
+				});
+			}
+			document.getElementById('btn-transcription').addEventListener('click', function (e) {
+				e.preventDefault();
+				const modal = document.getElementById('transcription-modal');
+				const content = document.getElementById('transcription-content');
+				modal.style.display = 'flex';
+				content.innerHTML = 'Chargement...';
+				fetch('introextraits.html')
+					.then(r => r.text())
+					.then(html => {
+						// Extraire le contenu pertinent si besoin, sinon afficher tout
+						content.innerHTML = html;
+					})
+					.catch(() => {
+						content.innerHTML = "Erreur lors du chargement de la transcription.";
+					});
 			});
-		}
-		document.getElementById('btn-transcription').addEventListener('click', function(e) {
-  e.preventDefault();
-  const modal = document.getElementById('transcription-modal');
-  const content = document.getElementById('transcription-content');
-  modal.style.display = 'flex';
-  content.innerHTML = 'Chargement...';
-  fetch('introextraits.html')
-    .then(r => r.text())
-    .then(html => {
-      // Extraire le contenu pertinent si besoin, sinon afficher tout
-      content.innerHTML = html;
-    })
-    .catch(() => {
-      content.innerHTML = "Erreur lors du chargement de la transcription.";
-    });
-});
 
-function closeTranscription() {
-  document.getElementById('transcription-modal').style.display = 'none';
-}
+			function closeTranscription() {
+				document.getElementById('transcription-modal').style.display = 'none';
+			}
 
-	</script>
-		<script>
-	document.querySelectorAll('.dropdown > a').forEach(function(link) {
-		link.addEventListener('click', function(e) {
-		e.preventDefault();
-		const parent = link.parentElement;
-		parent.classList.toggle('open');
-		});
-	});
-
-	document.querySelectorAll('.dropdown-sub > a').forEach(function(link) {
-		link.addEventListener('click', function(e) {
-		e.preventDefault();
-		const parent = link.parentElement;
-		parent.classList.toggle('open');
-		});
 		</script>
-		<footer id="fh5co-footer">
-			<div class="container">
-				<div class="row row-bottom-padded-md">
+		<script>
+			document.querySelectorAll('.dropdown > a').forEach(function (link) {
+				link.addEventListener('click', function (e) {
+					e.preventDefault();
+					const parent = link.parentElement;
+					parent.classList.toggle('open');
+				});
+			});
 
-					<div class="col-md-3 col-sm-6 col-xs-12 animate-box">
-						<div class="fh5co-footer-widget">
-							<ul class="fh5co-links">
-								<li><a href="apropos.html">À propos</a></li>
-							</ul>
-						</div>
-					</div>
+			document.querySelectorAll('.dropdown-sub > a').forEach(function (link) {
+				link.addEventListener('click', function (e) {
+					e.preventDefault();
+					const parent = link.parentElement;
+					parent.classList.toggle('open');
+				});
+			});
+		</script>
 
-					<div class="col-md-3 col-sm-6 col-xs-12 animate-box">
-						<div class="fh5co-footer-widget">
-							<h3>Contactez-nous</h3>
-							<p>
-								<p>PREFAB © 2025</p>
-								<p>LIDILEM, GRENOBLE & ICAR, LYON</p>
-                <p class="fh5co-left"><small>&copy; 2025 <a href="index.html">PREFAB-FLE</a></small></p>
-							</p>
-						</div>
-					</div>
-				</div>
-		</footer>
-<!-- END #fh5co-footer -->
-</div>
-<!-- END #fh5co-page -->
-		
+			<footer id="fh5co-footer" style="background-color: #222; color: #fff; padding: 20px 0; text-align: center;">
+		<div class="container">
+			
+			<!-- Informations du projet -->
+			<p style="margin-bottom: 5px; font-weight: bold;">PREFAB.FLE</p>
+			<p style="margin-bottom: 5px; color: #bbb;">LIDILEM (Grenoble) & ICAR (Lyon)</p>
+			
+			<hr style="border-color: #444; width: 50%; margin: 15px auto;">
+
+			<!-- Copyright -->
+			<p style="font-size: 0.85em; color: #888; margin: 0;">
+				&copy; 2026 <a href="index.html" style="color: #fff; text-decoration: none;">PREFAB-FLE</a> — Tous droits réservés.
+			</p>
+
+		</div>
+	</footer>
+		<!-- END #fh5co-footer -->
+		</div>
+		<!-- END #fh5co-page -->
+
 		<!-- jQuery -->
 		<script src="js/jquery.min.js"></script>
 		<!-- jQuery Easing -->
@@ -480,48 +555,53 @@ function closeTranscription() {
 		<!-- Magnific Popup -->
 		<script src="js/jquery.magnific-popup.min.js"></script>
 		<script src="js/magnific-popup-options.js"></script>
-	
-	
 		<!-- Main JS (Do not remove) -->
 		<script src="js/main.js"></script>
-	
 		<!-- Fermer le menu latéral mobile (offcanvas) -->
-<script>
-// Suppression du script d'ajout du bouton "fermer" pour le menu latéral mobile
-</script>
+		<script>
+		</script>
 
-<!-- Ajout du modal À propos -->
-<div id="apropos-modal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.7); z-index:9999; justify-content:center; align-items:center;">
-  <div style="background:#fff; max-width:500px; width:90vw; max-height:90vh; overflow:auto; border-radius:12px; padding:32px; position:relative; box-shadow:0 8px 32px rgba(0,0,0,0.2);">
-    <button onclick="toggleAproposPopup()" style="position:absolute; top:12px; right:16px; font-size:2rem; background:none; border:none; color:#FA5555; cursor:pointer;">&times;</button>
-    <h3>À propos</h3>
-    <p>Ce site est un prototype du projet PREFAB.FLE, conçu pour vous aider à apprendre et à pratiquer des PPI (phrases préfabriquées d'interaction) dans des contextes variés. 
-	<h2>📚 Corpus linguistiques</h2>
-        <p>Les données linguistiques utilisées dans ce projet proviennent des corpus suivants :</p>
-        <ul>
-        <li><a href="http://clapi.icar.cnrs.fr/" target="_blank">CLAPI - Interaction parlée</a></li>
-        <li><a href="http://clapi.icar.cnrs.fr/FLE/" target="_blank">CLAPI-FLE - Français Langue Étrangère</a></li>
-        <li><a href="https://fleuron.atilf.fr/" target="_blank">FLEURON - Corpus oraux du français</a></li>
-        <li><a href="http://clapi.icar.cnrs.fr/Corail/" target="_blank">CORAIL - Corpus d’Interactions Linguistiques</a></li>
-    	</ul>
-	 <h2>🎨 Design graphique</h2>
-    <p>Les éléments graphiques (illustrations, icônes, visuels) proviennent des ressources suivantes :</p>
-    <ul>
-    <li><a href="https://www.freepik.com/" target="_blank">Freepik</a></li>
-    <li><a href="https://www.freepik.com/author/stories" target="_blank">Illustrations de l’auteur Stories sur Freepik</a></li>
-    </ul>
-	<br><br>Contact : shaiane.da-silva-neves@etu.univ-grenoble-alpes.fr</p>
-  </div>
-</div>
-<script>
-function toggleAproposPopup() {
-  const modal = document.getElementById('apropos-modal');
-  if (modal.style.display === 'none' || modal.style.display === '') {
-    modal.style.display = 'flex';
-  } else {
-    modal.style.display = 'none';
-  }
-}
-</script>
+		<!-- Ajout du modal À propos -->
+		<div id="apropos-modal"
+			style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.7); z-index:9999; justify-content:center; align-items:center;">
+			<div
+				style="background:#fff; max-width:500px; width:90vw; max-height:90vh; overflow:auto; border-radius:12px; padding:32px; position:relative; box-shadow:0 8px 32px rgba(0,0,0,0.2);">
+				<button onclick="toggleAproposPopup()"
+					style="position:absolute; top:12px; right:16px; font-size:2rem; background:none; border:none; color:#FA5555; cursor:pointer;">&times;</button>
+				<h3>À propos</h3>
+				<p>Ce site est un prototype du projet PREFAB.FLE, conçu pour vous aider à apprendre et à pratiquer des
+					PPI (phrases préfabriquées d'interaction) dans des contextes variés.
+				<h2>📚 Corpus linguistiques</h2>
+				<p>Les données linguistiques utilisées dans ce projet proviennent des corpus suivants :</p>
+				<ul>
+					<li><a href="http://clapi.icar.cnrs.fr/" target="_blank">CLAPI - Interaction parlée</a></li>
+					<li><a href="http://clapi.icar.cnrs.fr/FLE/" target="_blank">CLAPI-FLE - Français Langue
+							Étrangère</a></li>
+					<li><a href="https://fleuron.atilf.fr/" target="_blank">FLEURON - Corpus oraux du français</a></li>
+					<li><a href="http://clapi.icar.cnrs.fr/Corail/" target="_blank">CORAIL - Corpus d’Interactions
+							Linguistiques</a></li>
+				</ul>
+				<h2>🎨 Design graphique</h2>
+				<p>Les éléments graphiques (illustrations, icônes, visuels) proviennent des ressources suivantes :</p>
+				<ul>
+					<li><a href="https://www.freepik.com/" target="_blank">Freepik</a></li>
+					<li><a href="https://www.freepik.com/author/stories" target="_blank">Illustrations de l’auteur
+							Stories sur Freepik</a></li>
+				</ul>
+				<p>Contact : shaiane.da-silva-neves@etu.univ-grenoble-alpes.fr</p>
+			</div>
+		</div>
+		<script>
+		function toggleAproposPopup() {
+			const modal = document.getElementById('apropos-modal');
+			if (modal.style.display === 'none' || modal.style.display === '') {
+				modal.style.display = 'flex';
+			} else {
+				modal.style.display = 'none';
+			}
+		}
+		</script>
 </body>
+
+
 </html>
