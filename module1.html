@@ -208,7 +208,7 @@
      <section id="fh5co-about">
       <div style="margin: 20px 0; border-bottom: 2px solid #FA5555; padding-bottom: 10px; display: flex; justify-content: space-between; align-items: center;">
         <h3 id="ac1">🔴 Activités pour se dire bonjour</h3>
-        <button class="btn btn-primary" onclick="toggleGlossary()">Glossaire</button>
+          <!-- <button class="btn btn-primary" onclick="toggleGlossary()">Glossaire</button>-->
       </div>
 
 	  <div id="glossary" style="display:none; position:fixed; top:20%; left:50%; transform:translateX(-50%); background:#fff; border-radius:10px; box-shadow:0 2px 12px rgba(0,0,0,0.15); padding:32px 24px; z-index:9999; min-width:320px; max-width:90vw;">
@@ -286,7 +286,7 @@ function filterGlossary() {
 <div class="video-container" style="margin-bottom: 40px;">
   <div class="video-wrapper">
     <h4 style="margin-top:16px; margin-bottom:12px;">
-      ⭕ <span style="color:#FA5555">1.</span> Regardons de plus près l'extrait accueillir des invités. <button style="text-align: center;" class="btn btn-primary" onclick="openCavaModal()">Regarder l'extrait</button>
+      ⭕ <span style="color:#FA5555">1.</span> Regardons de plus près l'extrait accueillir des invités. <button style="text-align: right;" class="btn btn-primary" onclick="openCavaModal()">▶ Lecture</button>
     </h4>
     <iframe src="https://ladigitale.dev/digiquiz/q/6836d55343cc3" allow="fullscreen; autoplay;" frameborder="0" style="width: 100%; height: 780px; overflow: hidden;"></iframe>
     </div>
@@ -363,7 +363,7 @@ function filterGlossary() {
   <div id="fh5co-about">
       <div style="margin: 20px 0; border-bottom: 2px solid #FA5555; padding-bottom: 10px; display: flex; justify-content: space-between; align-items: center;">
       <h3 id="ac2" style="margin-bottom: 0;">🔴 Activités pour se dire au revoir</h3>
-      <button class="btn btn-primary" onclick="toggleGlossary()">Glossaire</button>
+        <!-- <button class="btn btn-primary" onclick="toggleGlossary()">Glossaire</button> -->
     </div>
   </div>
   
@@ -500,14 +500,14 @@ const observer = new IntersectionObserver(function(entries) {
 }, { threshold: 0.5 }); // 50% visible
 observer.observe(completion);
 </script>
-    <!-- Un seul glossaire, placé ici -->
+    <!-- Un seul glossaire, placé ici 
     <div id="glossary">
       <button class="close-btn" onclick="toggleGlossary()">×</button>
       <h3>Glossaire</h3>
       <input type="text" id="glossary-search" placeholder="Rechercher..." onkeyup="filterGlossary()" style="width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 4px;">
       <ul id="glossary-list">
     </div>
-
+-->
 	<footer id="fh5co-footer" style="background-color: #222; color: #fff; padding: 20px 0; text-align: center;">
 		<div class="container">
 			
