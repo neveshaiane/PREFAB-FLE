@@ -25,6 +25,49 @@
   <!-- Bootstrap  -->
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/red.css">
+  <style>
+    .audio-resource-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .audio-resource-row audio {
+      flex: 1 1 80%;
+      min-width: 220px;
+    }
+
+    .audio-resource-row a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 6px 12px;
+      margin: 2px 3px;
+      border: 1.5px solid #FA5555;
+      border-radius: 6px;
+      color: #FA5555;
+      font-size: 0.9em;
+      font-weight: 500;
+      line-height: 1;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      background-color: #fff;
+    }
+
+    .audio-resource-row a svg {
+      width: 16px;
+      height: 16px;
+      stroke: currentColor;
+    }
+
+    .audio-resource-row a:hover,
+    .audio-resource-row a:focus {
+      background-color: #FA5555;
+      color: #fff;
+    }
+  </style>
   <script src="js/modernizr-2.6.2.min.js"></script>
   </head>
 
@@ -146,10 +189,74 @@
 
             <h4 style="font-weight: bold; color: #000000; margin-top: 20px;">Exemples</h4>
             <div style="display: flex; flex-direction: column; gap: 10px;">
-              <audio controls src="audio/cloture_aud1.mp3" style="width: 80%;"></audio>
-              <audio controls src="audio/cloture_aud2.mp3" style="width: 80%;"></audio>
-              <audio controls src="audio/cloture_aud3.m4a" style="width: 80%;"></audio>
-              <audio controls src="audio/cloture_aud4.m4a" style="width: 80%;"></audio>
+              <div class="audio-resource-row">
+                <audio controls src="audio/cloture_aud1.mp3"></audio>
+                <a href="audio/cloture_aud1.mp3" download title="Télécharger l'audio" aria-label="Télécharger l'audio">
+                  <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                  </svg>
+                </a>
+                <a href="pdf/aspects1/extrait1.pdf" target="_blank" title="Ouvrir le PDF" aria-label="Ouvrir le PDF">
+                  <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                    <polyline points="10 9 9 9 8 9"></polyline>
+                  </svg>
+                </a>
+              </div>
+              <div class="audio-resource-row">
+                <audio controls src="audio/cloture_aud2.mp3"></audio>
+                <a href="audio/cloture_aud2.mp3" download title="Télécharger l'audio" aria-label="Télécharger l'audio">
+                  <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                  </svg>
+                </a>
+                <a href="pdf/aspects1/extrait2.pdf" target="_blank" title="Ouvrir le PDF" aria-label="Ouvrir le PDF">
+                  <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                    <polyline points="10 9 9 9 8 9"></polyline>
+                  </svg>
+                </a>
+              </div>
+              <div class="audio-resource-row">
+                <audio controls src="audio/cloture_aud3.m4a"></audio>
+                <a href="audio/cloture_aud3.m4a" download title="Télécharger l'audio" aria-label="Télécharger l'audio">
+                  <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                  </svg>
+                </a>
+                <a href="pdf/aspects1/extrait3.pdf" target="_blank" title="Ouvrir le PDF" aria-label="Ouvrir le PDF">
+                  <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                    <polyline points="10 9 9 9 8 9"></polyline>
+                  </svg>
+                </a>
+              </div>
+              <div class="audio-resource-row">
+                <audio controls src="audio/cloture_aud4.m4a"></audio>
+                <a href="audio/cloture_aud4.m4a" download title="Télécharger l'audio" aria-label="Télécharger l'audio">
+                  <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                  </svg>
+                </a>
+                <a href="pdf/aspects1/extrait4.pdf" target="_blank" title="Ouvrir le PDF" aria-label="Ouvrir le PDF">
+                  <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                    <polyline points="10 9 9 9 8 9"></polyline>
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
 
